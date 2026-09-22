@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "longcat-deepresearch"
+version = "0.1.0"
+description = "Plan globally. Research independently. Synthesize coherently."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Meituan LongCat Team"}]
+keywords = ["deep-research", "agents", "research", "citations"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["ruff>=0.12,<0.13"]
+
+[project.scripts]
+longcat-deepresearch = "longcat_deepresearch.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["longcat_deepresearch*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
