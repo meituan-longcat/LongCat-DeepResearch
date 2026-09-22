@@ -1,10 +1,10 @@
 ![LongCat-DeepResearch](assets/longcat_logo.png)
 
-<p align="center"><strong>全局规划，独立研究，连贯综合。</strong></p>
+<p align="center"><sub><strong>全局规划，独立研究，连贯综合。</strong></sub></p>
 
-<p align="center"><a href="https://dev.sankuai.com/code/repo-detail/~xuyue54/longcat_deepresearch/file/detail?branch=refs%2Fheads%2Fmaster&amp;path=technical_report/LongCat-DeepResearch.pdf"><img alt="论文 PDF" src="https://img.shields.io/badge/Paper-PDF-d9534f?style=for-the-badge"></a>&nbsp;<a href="."><img alt="GitHub 仓库" src="https://img.shields.io/badge/GitHub-Repository-24292f?style=for-the-badge&amp;logo=github"></a>&nbsp;<a href="LICENSE"><img alt="MIT 许可证" src="https://img.shields.io/badge/License-MIT-5b6ea6?style=for-the-badge"></a></p>
+<p align="center"><a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/technical_report/LongCat-DeepResearch.pdf"><img alt="论文 PDF" src="https://img.shields.io/badge/Paper-PDF-d9534f?style=for-the-badge"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch"><img alt="GitHub 仓库" src="https://img.shields.io/badge/GitHub-Repository-24292f?style=for-the-badge&amp;logo=github"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/LICENSE"><img alt="MIT 许可证" src="https://img.shields.io/badge/License-MIT-5b6ea6?style=for-the-badge"></a></p>
 
-<p align="center"><a href="https://dev.sankuai.com/code/repo-detail/~xuyue54/longcat_deepresearch/file/detail?branch=refs%2Fheads%2Fmaster&amp;path=README.md">English</a> | <strong>简体中文</strong></p>
+<p align="center"><a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/README.md">English</a> | <strong>简体中文</strong></p>
 
 ## **项目概览**
 
