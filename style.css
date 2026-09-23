@@ -216,9 +216,9 @@ button { font: inherit; }
   margin: 18.76px 0;
   color: #111827;
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 30px;
+  font-size: 36.8px;
   font-weight: 750;
-  line-height: 38px;
+  line-height: 1.1;
   letter-spacing: -0.025em;
 }
 
@@ -290,7 +290,7 @@ button { font: inherit; }
   margin: 0 0 28px;
   color: #111827;
   font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 36.8px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -640,12 +640,12 @@ footer {
   .site-logo img { width: 30px; height: 30px; }
   .site-logo span { font-size: 18px; }
   .hero { padding-top: 126px; text-align: left; }
-  .hero h1 { margin: 0 0 16px; font-size: 29px; line-height: 1.25; }
+  .hero h1 { margin: 0 0 16px; font-size: 31px; line-height: 1.2; }
   .hero-meta { justify-content: flex-start; }
   .hero-links { justify-content: flex-start; gap: 8px; }
   .intro, .prose, .group-heading__body { font-size: 15px; line-height: 1.72; }
   .section-title { font-size: 28px; }
-  .group-heading__title { font-size: 31px; }
+  .group-heading__title { font-size: 29px; }
   .content-section { padding-top: 40px; padding-bottom: 40px; }
   .release-list { grid-template-columns: 1fr; }
   .benchmark-overview { min-height: 0; padding: 24px 14px; grid-template-columns: 1fr; gap: 34px; }
