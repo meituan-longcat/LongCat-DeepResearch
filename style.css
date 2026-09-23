@@ -643,7 +643,6 @@ footer {
   .hero h1 { margin: 0 0 16px; font-size: 29px; line-height: 1.25; }
   .hero-meta { justify-content: flex-start; }
   .hero-links { justify-content: flex-start; gap: 8px; }
-  .paper-status { margin-left: 0; }
   .intro, .prose, .group-heading__body { font-size: 15px; line-height: 1.72; }
   .section-title { font-size: 28px; }
   .group-heading__title { font-size: 31px; }
@@ -661,18 +660,6 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-}
-
-.paper-status {
-  margin: 22px auto 0;
-  width: fit-content;
-  padding: 6px 12px;
-  color: #6b7280;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 600;
 }
 
 .pipeline {
