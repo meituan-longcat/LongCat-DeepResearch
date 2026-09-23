@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en" class="no-js" data-theme="longcat">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Introducing LongCat-DeepResearch</title>
+    <meta name="description" content="LongCat-DeepResearch coordinates exploratory planning, independent section research, direct assembly, and global-to-local editing through an executable ResearchSpec.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Introducing LongCat-DeepResearch">
+    <meta property="og:description" content="A model-and-harness system for evidence-rich, long-form deep research from the Meituan LongCat Team.">
+    <link rel="icon" href="./longcat-mark.svg">
+    <link rel="stylesheet" href="./style.css">
+    <script>document.documentElement.classList.remove('no-js');</script>
+  </head>
+  <body>
+    <div class="page-root">
+      <a class="site-logo" href="#overview" aria-label="LongCat-DeepResearch overview">
+        <img src="./longcat-mark.svg" alt="">
+        <span>LongCat</span>
+      </a>
+
+      <nav class="mobile-nav" aria-label="Article navigation">
+        <div class="mobile-nav-inner">
+          <a href="#overview">Overview</a>
+          <a href="#challenges">Challenge</a>
+          <a href="#harness">Research Harness</a>
+          <a href="#training">Research Data</a>
+          <a href="#evaluation">Results</a>
+          <a href="#analysis">What We Learned</a>
+          <a href="#case-study">Case Study</a>
+          <a href="#notes">Limitations</a>
+          <a href="#citation">Citation</a>
+        </div>
+      </nav>
+
+      <aside class="side-nav" aria-label="Article contents">
+        <ul class="side-nav__list">
+          <li><a class="side-nav__link side-nav__link--group is-active" href="#overview"><span class="side-nav__marker"></span><span>Overview</span></a></li>
+          <li><a class="side-nav__link side-nav__link--group" href="#challenges"><span class="side-nav__marker"></span><span>The Challenge</span></a></li>
+          <li><a class="side-nav__link side-nav__link--group" href="#harness"><span class="side-nav__marker"></span><span>Research Harness</span></a></li>
+          <li><a class="side-nav__link side-nav__link--group" href="#training"><span class="side-nav__marker"></span><span>Research Data</span></a></li>
+          <li><a class="side-nav__link side-nav__link--group" href="#evaluation"><span class="side-nav__marker"></span><span>Results</span></a></li>
+          <li><a class="side-nav__link side-nav__link--group" href="#analysis"><span class="side-nav__marker"></span><span>What We Learned</span></a></li>
+          <li><a class="side-nav__link side-nav__link--group" href="#case-study"><span class="side-nav__marker"></span><span>Case Study</span></a></li>
+          <li><a class="side-nav__link side-nav__link--group" href="#notes"><span class="side-nav__marker"></span><span>Limitations</span></a></li>
+          <li><a class="side-nav__link side-nav__link--group" href="#citation"><span class="side-nav__marker"></span><span>Citation</span></a></li>
+        </ul>
+      </aside>
+
+      <header class="hero">
+        <h1>Introducing LongCat-DeepResearch</h1>
+        <div class="hero-meta"><span>September 2026</span><span>·</span><span>Meituan LongCat Team</span></div>
+        <div class="hero-links">
+          <a class="link-btn" href="https://github.com/meituan-longcat/LongCat-DeepResearch" target="_blank" rel="noreferrer"><span class="link-icon">⌘</span>GitHub</a>
+          <a class="link-btn" href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/technical_report/LongCat-DeepResearch.pdf" target="_blank" rel="noreferrer"><span class="link-icon">▧</span>Technical report</a>
+          <span class="link-btn disabled" aria-disabled="true"><span class="link-icon">↗</span>arXiv · coming soon</span>
+          <span class="link-btn disabled" aria-disabled="true"><span class="link-icon">◫</span>Hugging Face · coming soon</span>
+        </div>
+        <div class="paper-status">LongCat · Technical report companion</div>
+      </header>
+
+      <section class="intro-section" id="overview"><div class="intro reveal">
+        <p><strong>LongCat-DeepResearch</strong> combines a model built on LongCat-2.0 with improvements in deep-research capabilities and the LongCat-DeepResearch harness. These improvements are intended to be incorporated into the next general-purpose LongCat model release.</p>
+        <p>The system organizes open-ended research around an executable <strong>ResearchSpec</strong>. Multiple planners explore sources and refine a shared agenda; independent Researchers develop citation-bearing sections; direct assembly and coordinated editing turn those sections into a complete report without asking one final writer to regenerate everything.</p>
+        <p>LongCat-DeepResearch achieves <strong>55.25</strong> on DeepResearchBench, <strong>51.35</strong> on DeepResearchBench II, and <strong>79.83</strong> on ResearchRubrics. Among the four systems compared in the report, it has the highest overall score on all three public benchmarks.</p>
+      </div></section>
+
+      <section class="content-section overview-section">
+        <figure class="report-figure reveal" id="benchmark-overview">
+          <img src="./assets/recorded-overview.png" alt="Public-benchmark scores for LongCat-DeepResearch, Gemini-DeepResearch, ChatGPT-DeepResearch, and Claude-DeepResearch. LongCat-DeepResearch scores 55.25 on DeepResearchBench, 51.35 on DeepResearchBench II, and 79.83 on ResearchRubrics.">
+          <figcaption>Figure 1. Public-benchmark scores.</figcaption>
+        </figure>
+      </section>
+
+      <section class="group-heading" id="challenges">
+        <h2 class="group-heading__title reveal">A Shared Agenda, Without a Shared Context Bottleneck</h2>
+        <p class="group-heading__body reveal">Deep research is not a linear retrieve-then-write task. New evidence reveals new questions, and each section can grow into a substantial investigation. Keeping every branch in one expanding history forces evidence, intermediate reasoning, and draft text to compete for context. Compressing those branches too early can discard details before their importance is clear.</p>
+      </section>
+      <section class="content-section"><div class="prose reveal">
+        <p>LongCat-DeepResearch separates <strong>global coordination</strong> from <strong>local investigation</strong>. A compact ResearchSpec records what the report needs to establish and how the work is divided. The detailed evidence stays with the Researchers that use it to write each section. Completed sections, rather than recurrent summaries, become the artifacts passed into composition.</p>
+      </div></section>
+
+      <section class="group-heading" id="harness">
+        <h2 class="group-heading__title reveal">The LongCat-DeepResearch Harness</h2>
+        <p class="group-heading__body reveal">The harness moves from an inspectable research agenda to independent section research, then coordinates the resulting text through direct assembly and global-to-local editing.</p>
+      </section>
+      <section class="content-section">
+        <figure class="report-figure reveal" id="harness-figure">
+          <img class="harness-desktop" src="./assets/research-harness-green.svg" alt="Three stages: explore and plan, research and write sections independently, then assemble and edit the report.">
+          <div class="harness-mobile">
+            <img src="./assets/research-harness-green.svg#plan" width="520" height="853" style="aspect-ratio:520 / 853;object-fit:fill" alt="Harness stage 1: explore and plan">
+            <div class="data-synthesis-transfer" aria-hidden="true">Query + ResearchSpec ↓</div>
+            <img src="./assets/research-harness-green.svg#research" width="504" height="853" style="aspect-ratio:504 / 853;object-fit:fill" alt="Harness stage 2: research and write sections">
+            <div class="data-synthesis-transfer" aria-hidden="true">Citation-bearing sections ↓</div>
+            <img src="./assets/research-harness-green.svg#compose" width="520" height="853" style="aspect-ratio:520 / 853;object-fit:fill" alt="Harness stage 3: assemble and edit">
+          </div>
+          <figcaption>Figure 2. The LongCat-DeepResearch harness.</figcaption>
+        </figure>
+        <div class="prose reveal">
+          <p><strong>Explore before committing.</strong> Planning Writers briefly search and read before proposing candidate specifications. A Planning Judge integrates their perspectives, a Critic looks for missing questions and cases, and a Reviser updates the plan. The resulting ResearchSpec records scope, research questions, required entities or cases, provisional source leads, and section responsibilities.</p>
+          <p><strong>Research and write in independent section contexts.</strong> Each Researcher receives the original query, the complete ResearchSpec, and one assignment. It continues gathering evidence and writes a complete cited section from its own research history. The ResearchSpec is shared; the detailed tool interactions are not forced into one context.</p>
+          <p><strong>Assemble first, then coordinate.</strong> The harness mechanically assembles the sections without rewriting them. A Global Editor identifies conflicts, repeated material, and ownership; Local Editors revise assigned sections against those directives. Global judgment and local generation are separated, while the original section artifacts remain available for inspection.</p>
+        </div>
+      </section>
+
+      <section class="group-heading" id="training">
+        <h2 class="group-heading__title reveal">Research Tasks and Trajectories</h2>
+        <p class="group-heading__body reveal">The same stage interfaces used at inference time provide concrete units for building and checking research-oriented training data.</p>
+      </section>
+      <section class="content-section">
+        <div class="prose reveal">
+          <p><strong>Ground questions and rubrics in independent source material.</strong> A target profile and either a licensed review article or a frozen multi-source brief condition the research question and its hidden task-specific rubric. Factual criteria require supporting evidence; analytical criteria specify the comparisons or inferences the report should make.</p>
+          <p><strong>Validate the task before collecting a trajectory.</strong> Bounded searchability checks look for alternative support after excluding the construction article. Additional checks cover duplicate criteria, answer leakage, temporal scope, and question-rubric alignment. KEEP, REVISE, and DROP decisions preserve the distinction between complete, partial, and missing support.</p>
+        </div>
+        <figure class="report-figure data-synthesis" id="data-synthesis">
+          <img class="data-synthesis-desktop" src="./assets/data_synthesis_flow.svg" alt="Evidence-grounded research-task construction, validation, trajectory collection, and structural filtering.">
+          <div class="data-synthesis-mobile">
+            <img src="./assets/data_synthesis_flow.svg#grounding" width="440" height="838" style="aspect-ratio:440 / 838;object-fit:fill" alt="Stage 1: grounded task synthesis">
+            <div class="data-synthesis-transfer" aria-hidden="true"><span>Task + hidden rubric bundle</span><span class="data-synthesis-transfer__arrow">↓</span></div>
+            <img src="./assets/data_synthesis_flow.svg#validation" width="516" height="838" style="aspect-ratio:516 / 838;object-fit:fill" alt="Stage 2: task validation">
+            <div class="data-synthesis-transfer" aria-hidden="true"><span>Accepted query</span><span class="data-synthesis-transfer__arrow">↓</span></div>
+            <img src="./assets/data_synthesis_flow.svg#trajectory" width="392" height="838" style="aspect-ratio:392 / 838;object-fit:fill" alt="Stage 3: trajectory collection and filtering">
+          </div>
+          <figcaption>Figure 3. Evidence-grounded construction of research tasks and trajectories.</figcaption>
+        </figure>
+        <div class="prose reveal">
+          <p><strong>Collect the real stage dependencies.</strong> Accepted queries drive teacher executions of the harness, recording candidate and final ResearchSpecs, tool calls and observations, cited sections, assembled drafts, and editorial decisions. Filtering checks role identity, tool-call closure, and intermediate-artifact validity.</p>
+          <p>Research-related data are used alongside other data in the mid-training and post-training of LongCat's general-purpose models. A candidate trajectory does not, by itself, establish inclusion in a trained checkpoint.</p>
+        </div>
+      </section>
+
+      <section class="group-heading" id="evaluation">
+        <h2 class="group-heading__title reveal">Results Across Three Public Benchmarks</h2>
+        <p class="group-heading__body reveal">The comparison treats each Deep Research product as a complete system, including its native tools and budgets.</p>
+      </section>
+      <section class="content-section">
+        <div class="table-scroll reveal">
+          <table class="unified-table results-table">
+            <thead><tr><th>System</th><th>DeepResearchBench</th><th>DeepResearchBench II</th><th>ResearchRubrics</th></tr></thead>
+            <tbody>
+              <tr class="longcat-row"><td>LongCat-DeepResearch</td><td>55.25</td><td>51.35</td><td>79.83</td></tr>
+              <tr><td>ChatGPT-DeepResearch</td><td>54.95</td><td>47.16</td><td>74.21</td></tr>
+              <tr><td>Claude-DeepResearch</td><td>53.43</td><td>48.18</td><td>72.91</td></tr>
+              <tr><td>Gemini-DeepResearch</td><td>50.21</td><td>46.72</td><td>64.92</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="metric-strip reveal" aria-label="Margins over the strongest compared alternative">
+          <div><strong>+0.30</strong><span>DeepResearchBench</span></div>
+          <div><strong>+3.17</strong><span>DeepResearchBench II</span></div>
+          <div><strong>+5.62</strong><span>ResearchRubrics</span></div>
+        </div>
+        <div class="prose reveal">
+          <p>The compared products are accessed through their official clients with Gemini 3.7 Flash, GPT-5.6 Sol (xhigh), and Claude Opus 5 (xhigh) selected for Gemini-DeepResearch, ChatGPT-DeepResearch, and Claude-DeepResearch, respectively. DeepResearchBench and DeepResearchBench II use GPT-5.5 (medium) as evaluator; ResearchRubrics uses Gemini 2.5 Pro.</p>
+          <p>LongCat-DeepResearch leads on comprehensiveness, insight, and instruction following in DeepResearchBench; on information recall and analysis in DeepResearchBench II; and on explicit requirements, implicit requirements, and synthesis in ResearchRubrics. The breakdown also identifies room to improve readability, presentation, citation quality, and communication.</p>
+          <p>On the separate in-house benchmark, LongCat-DeepResearch scores 76.04 overall, 0.55 points below ChatGPT-DeepResearch. It has the highest Content and Analysis scores in that comparison, while Presentation remains weaker.</p>
+        </div>
+      </section>
+
+      <section class="group-heading" id="analysis">
+        <h2 class="group-heading__title reveal">What the Design Analyses Show</h2>
+        <p class="group-heading__body reveal">The report separates full-benchmark system comparisons from development-subset studies of planning, research context, and editing.</p>
+      </section>
+      <section class="content-section">
+        <div class="insight-grid reveal">
+          <article class="insight-card">
+            <span class="insight-card__eyebrow">Planning</span>
+            <h3>Integrating perspectives helps</h3>
+            <p>On a fixed ResearchRubrics subset, integrating three Writers through the Judge raises the final total from 81.67 to 85.13 versus a fixed single-Writer plan.</p>
+          </article>
+          <article class="insight-card">
+            <span class="insight-card__eyebrow">Refinement</span>
+            <h3>More planning is not automatically better</h3>
+            <p>Critic/Reviser cycles raise planned coverage, but category and total report scores move differently. ResearchSpec is inspectable state, not a calibrated selector for the best report.</p>
+          </article>
+          <article class="insight-card">
+            <span class="insight-card__eyebrow">Research contexts</span>
+            <h3>Section-level investigation matters</h3>
+            <p>The full pipeline has the highest observed mean in the component study. Replacing parallel section Researchers with one whole-report Researcher lowers both displayed benchmark means.</p>
+          </article>
+          <article class="insight-card">
+            <span class="insight-card__eyebrow">Editing</span>
+            <h3>Coordinated revision improves the aggregate trend</h3>
+            <p>Three enhanced Editor rounds reach a 53.96 average automatic readability preference and the highest displayed average native score, although benchmark-level trends differ.</p>
+          </article>
+        </div>
+
+        <h3 class="sub-title reveal">Model and harness are complementary</h3>
+        <div class="table-scroll reveal">
+          <table class="unified-table configuration-table">
+            <thead><tr><th>Model</th><th>Harness</th><th>DeepResearchBench</th><th>DeepResearchBench II</th><th>ResearchRubrics</th></tr></thead>
+            <tbody>
+              <tr><td>LongCat (previous release)</td><td>ReAct / direct report</td><td>47.65</td><td>33.13</td><td>60.33</td></tr>
+              <tr><td>LongCat (previous release)</td><td>Current harness</td><td>53.58</td><td>48.68</td><td>71.90</td></tr>
+              <tr class="longcat-row"><td>LongCat (current)</td><td>Current harness</td><td>55.25</td><td>51.35</td><td>79.83</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prose reveal">
+          <p>All three configurations are evaluated on the full benchmarks. With the previous model fixed, the current harness improves every displayed score. Holding the current harness fixed, the current LongCat model improves them further. The result supports treating model capability and research orchestration as complementary parts of the system.</p>
+        </div>
+      </section>
+
+      <section class="group-heading" id="case-study">
+        <h2 class="group-heading__title reveal">From a Research Question to a Traceable Edit</h2>
+        <p class="group-heading__body reveal">A recorded portfolio-management trajectory shows how planning changes propagate into section research and how editing resolves overlap without regenerating the report.</p>
+      </section>
+      <section class="content-section">
+        <div class="case-flow reveal" aria-label="Case study stages">
+          <div><span>01</span><strong>Plan</strong><p>The merged ResearchSpec assigns 19 subsections across the user's four themes.</p></div>
+          <div><span>02</span><strong>Refine</strong><p>The Critic identifies Deep Portfolio Theory as a missing direction; the Reviser adds a concrete question to S2.2.</p></div>
+          <div><span>03</span><strong>Research</strong><p>Independent Researchers expand assignments into cited prose, including CAPM evidence and the newly added topic.</p></div>
+          <div><span>04</span><strong>Coordinate</strong><p>The Global Editor assigns detailed Fama-French coverage to one section; the Local Editor retains a concise finding and adds a cross-reference.</p></div>
+        </div>
+        <div class="prose reveal">
+          <p>The artifacts make the change inspectable: the added research question appears in the revised ResearchSpec, the evidence appears in section drafts, and the ownership decision appears in the final edit. The same case also exposes limits: the final report retains an internal section identifier and still misses some benchmark requirements. Traceability helps diagnose gaps; it does not guarantee complete coverage.</p>
+        </div>
+      </section>
+
+      <section class="group-heading notes-heading" id="notes"><h2 class="group-heading__title reveal">Scope and Limitations</h2></section>
+      <section class="content-section notes-section">
+        <ol class="notes-list reveal">
+          <li><strong>System comparison.</strong> Public scores compare deployed Deep Research systems with their native tools and budgets. They do not isolate one model component or training stage.</li>
+          <li><strong>Automatic evaluation.</strong> Native benchmark scores, ResearchSpec coverage, and readability preference measure different properties. The readability study is model-judged, not a human rating.</li>
+          <li><strong>Development studies.</strong> Component and Editor analyses use previously inspected development subsets. Their trends should not be read as independent full-benchmark confirmation.</li>
+          <li><strong>ResearchSpec boundaries.</strong> The plan is fixed after dispatch in the current pipeline. Reopening the global agenda during section research remains future work.</li>
+          <li><strong>Data provenance.</strong> Validating a task or recording a trajectory does not establish that it was accepted into a training release.</li>
+        </ol>
+      </section>
+
+      <section class="group-heading citation-heading" id="citation"><h2 class="group-heading__title reveal">Citation</h2></section>
+      <section class="content-section citation-section">
+        <div class="prose reveal"><p>If you find this project useful, please cite:</p></div>
+        <pre class="citation-block reveal"><code>@techreport{longcatdeepresearch2026,
+  title  = {LongCat-DeepResearch Technical Report},
+  author = {
+    Meituan LongCat Team and He Zhu and Yue Xu and
+    Xunliang Cai and Yan Chen and Fan Yang and
+    Lingchuan Liu and others
+  },
+  year   = {2026}
+}</code></pre>
+      </section>
+      <footer>LongCat-DeepResearch · Meituan LongCat Team</footer>
+    </div>
+
+    <script>
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+      const navLinks = [...document.querySelectorAll('.side-nav__link')];
+      const sections = navLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      const navObserver = new IntersectionObserver((entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (!visible) return;
+        navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${visible.target.id}`));
+      }, { rootMargin: '-20% 0px -68% 0px', threshold: 0 });
+      sections.forEach((section) => navObserver.observe(section));
+    </script>
+  </body>
+</html>

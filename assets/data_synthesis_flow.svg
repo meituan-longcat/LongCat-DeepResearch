@@ -1,0 +1,736 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="background:#FFFFFF; color-scheme:only light" version="1.1" width="6.370000in" height="3.842984in" viewBox="0 0 1431 863" role="img" aria-labelledby="figure-title figure-description">
+  <style>view:target ~ g [data-cell-id='primary-task-bundle'], view:target ~ g [data-cell-id='primary-accepted-query'] {display:none}</style>
+  <view id="trajectory" viewBox="1029.2 9.2 392 838"/>
+  <view id="validation" viewBox="481.2 9.2 516 838"/>
+  <view id="grounding" viewBox="9.2 9.2 440 838"/>
+  <defs/>
+  <rect fill="#ffffff" width="100%" height="100%" x="0" y="0"/>
+  <g>
+    <g data-cell-id="0">
+      <g data-cell-id="1">
+        <g data-cell-id="grounding">
+          <g>
+            <rect x="13" y="13" width="432" height="830" rx="24" ry="24" fill="#ffffff" stroke="#aab5ae" stroke-width="2.4" pointer-events="all"/>
+          </g>
+          <g data-cell-id="grounding-number">
+            <g>
+              <ellipse cx="59" cy="61" rx="20" ry="20" fill="#087a2f" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#FFFFFF" font-family="Arial" font-weight="bold" text-anchor="middle" font-size="26px">
+                <text x="59" y="73">1</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="grounding-title">
+            <g>
+              <rect x="94" y="42" width="324" height="40" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="32px">
+                <text x="94" y="74.5">Grounded synthesis</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="profile-title">
+            <g>
+              <rect x="41" y="114" width="350" height="30" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="26px">
+                <text x="41" y="138.5">Target profile</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="profile-fields">
+            <g>
+              <rect x="41" y="155" width="376" height="27" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#202823" font-family="Arial" text-anchor="start" font-size="24px">
+                <text x="41" y="177">Language &#xB7; domain &#xB7; task shape</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="profile-rule">
+            <g>
+              <path d="M 41 198.5 L 417 198.5" fill="none" stroke="#e0e7e1" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+            </g>
+          </g>
+          <g data-cell-id="source-context">
+            <g>
+              <rect x="41" y="223" width="376" height="338" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g data-cell-id="article">
+              <g transform="translate(0.5,0.5)">
+                <path d="M 54.22 233.84 L 95.09 233.84 L 112.78 254.08 L 112.78 322.16 L 54.22 322.16 Z" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 95.09 233.84 L 95.09 254.08 L 112.78 254.08" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 63.37 268.8 L 102.41 268.8" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 63.37 282.6 L 102.41 282.6" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 63.37 296.4 L 93.87 296.4" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+              </g>
+            </g>
+            <g data-cell-id="article-title">
+              <g>
+                <rect x="142" y="232" width="265" height="62" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="26px">
+                  <text x="142" y="257">CC-BY review</text>
+                  <text x="142" y="288">article</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="article-scope">
+              <g>
+                <rect x="142" y="307" width="265" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#59645D" font-family="Arial" text-anchor="start" font-size="24px">
+                  <text x="142" y="329">Independent source</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="source-or">
+              <g>
+                <rect x="62" y="339" width="50" height="30" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#59645D" font-family="Arial" text-anchor="middle" font-size="24px">
+                  <text x="87" y="362.5">or</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="brief">
+              <g transform="translate(0.5,0.5)">
+                <rect x="47.74" y="385.91" width="59.2" height="70.98" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" pointer-events="all"/>
+                <rect x="52.92" y="393.19" width="59.2" height="70.98" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" pointer-events="all"/>
+                <path d="M 59.58 401.38 L 98.06 401.38 L 119.52 421.4 L 119.52 474.18 L 59.58 474.18 Z" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 98.06 401.38 L 98.06 421.4 L 119.52 421.4" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 70.68 435.96 L 106.94 435.96" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 70.68 449.61 L 106.94 449.61" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 70.68 463.26 L 96.58 463.26" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+              </g>
+            </g>
+            <g data-cell-id="brief-title">
+              <g>
+                <rect x="142" y="386" width="265" height="62" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="26px">
+                  <text x="142" y="411">Frozen multi-source</text>
+                  <text x="142" y="442">brief</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="brief-fields">
+              <g>
+                <rect x="142" y="458" width="265" height="56" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#59645D" font-family="Arial" text-anchor="start" font-size="24px">
+                  <text x="142" y="480">Facts &#xB7; excerpts</text>
+                  <text x="142" y="509">URLs</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="provenance">
+              <g>
+                <rect x="41" y="528" width="376" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#59645D" font-family="Arial" text-anchor="start" font-size="24px">
+                  <text x="41" y="550">Provenance + limitations</text>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="bundle">
+            <g>
+              <rect x="41" y="593" width="376" height="214" rx="7" ry="7" fill="#f1fbf3" stroke="#16ad42" stroke-width="2" pointer-events="all"/>
+            </g>
+            <g data-cell-id="bundle-title">
+              <g>
+                <rect x="59" y="606" width="340" height="36" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="26px">
+                  <text x="59" y="633.5">Task + rubric bundle</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="query-label">
+              <g>
+                <rect x="51" y="660" width="174" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="middle" font-size="24px">
+                  <text x="138" y="682">Natural query</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="rubric-label">
+              <g>
+                <rect x="233" y="660" width="174" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="middle" font-size="24px">
+                  <text x="320" y="682">Hidden rubrics</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="query-sheet">
+              <g transform="translate(0.5,0.5)">
+                <path d="M 104.24 705.7 L 145.78 705.7 L 163.76 724.4 L 163.76 787.3 L 104.24 787.3 Z" fill="#ffffff" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 145.78 705.7 L 145.78 724.4 L 163.76 724.4" fill="none" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 113.54 738 L 153.22 738" fill="none" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 113.54 750.75 L 153.22 750.75" fill="none" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 113.54 763.5 L 144.54 763.5" fill="none" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+              </g>
+            </g>
+            <g data-cell-id="rubric-sheet">
+              <g transform="translate(0.5,0.5)">
+                <path d="M 289.24 705.7 L 333.88 705.7 L 348.76 722.7 L 348.76 787.3 L 289.24 787.3 Z" fill="#ffffff" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 333.88 705.7 L 333.88 722.7 L 348.76 722.7" fill="none" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <rect x="298.54" y="734.6" width="6.2" height="8.5" fill="none" stroke="#087a2f" stroke-width="2.6" pointer-events="all"/>
+                <rect x="298.54" y="751.6" width="6.2" height="8.5" fill="none" stroke="#087a2f" stroke-width="2.6" pointer-events="all"/>
+                <rect x="298.54" y="768.6" width="6.2" height="8.5" fill="none" stroke="#087a2f" stroke-width="2.6" pointer-events="all"/>
+                <path d="M 312.18 738.85 L 338.22 738.85 M 312.18 755.85 L 338.22 755.85 M 312.18 772.85 L 331.4 772.85" fill="none" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g data-cell-id="validation">
+          <g>
+            <rect x="485" y="13" width="508" height="830" rx="24" ry="24" fill="#ffffff" stroke="#16ad42" stroke-width="2.4" pointer-events="all"/>
+          </g>
+          <g data-cell-id="validation-number">
+            <g>
+              <ellipse cx="531" cy="61" rx="20" ry="20" fill="#087a2f" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#FFFFFF" font-family="Arial" font-weight="bold" text-anchor="middle" font-size="26px">
+                <text x="531" y="73">2</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="validation-title">
+            <g>
+              <rect x="566" y="42" width="400" height="40" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="32px">
+                <text x="566" y="74.5">Task validation</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="article-gate">
+            <g>
+              <rect x="511" y="115" width="456" height="340" rx="6.5" ry="6.5" fill="#f7f9f7" stroke="#e0e7e1" stroke-width="2" pointer-events="all"/>
+            </g>
+            <g data-cell-id="article-gate-title">
+              <g>
+                <rect x="529" y="127" width="420" height="36" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="26px">
+                  <text x="529" y="154.5">Article-based validation</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="atomic-query-search">
+              <g transform="translate(0.5,0.5)">
+                <ellipse cx="565.24" cy="210.24" rx="19.47" ry="19.47" fill="#f1fbf3" stroke="#087a2f" stroke-width="3" pointer-events="all"/>
+                <path d="M 579.99 224.99 L 600.64 245.64" fill="none" stroke="#087a2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+              </g>
+            </g>
+            <g data-cell-id="blocked-page">
+              <g transform="translate(0.5,0.5)">
+                <path d="M 703.94 185.38 L 735.43 185.38 L 749.06 200.56 L 749.06 251.62 L 703.94 251.62 Z" fill="#ffffff" stroke="#59645d" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 735.43 185.38 L 735.43 200.56 L 749.06 200.56" fill="none" stroke="#59645d" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 710.99 211.6 L 741.07 211.6" fill="none" stroke="#59645d" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 710.99 221.95 L 734.49 221.95" fill="none" stroke="#59645d" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+              </g>
+              <g data-cell-id="blocked-slash">
+                <g transform="translate(0.5,0.5)">
+                  <path d="M 704 218.5 L 748 218.5" fill="none" stroke="#a14542" stroke-width="3" stroke-miterlimit="10" transform="rotate(-49,726,218.5)" pointer-events="all"/>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="fetched-pages">
+              <g transform="translate(0.5,0.5)">
+                <rect x="851.62" y="180.77" width="49.6" height="60.06" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" pointer-events="all"/>
+                <rect x="855.96" y="186.93" width="49.6" height="60.06" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" pointer-events="all"/>
+                <path d="M 861.54 193.86 L 893.78 193.86 L 911.76 210.8 L 911.76 255.46 L 861.54 255.46 Z" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 893.78 193.86 L 893.78 210.8 L 911.76 210.8" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 870.84 223.12 L 901.22 223.12" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 870.84 234.67 L 892.54 234.67" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+              </g>
+            </g>
+            <g data-cell-id="search-label">
+              <g>
+                <rect x="520" y="268" width="132" height="56" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" text-anchor="middle" font-size="24px">
+                  <text x="586" y="290">Atomic</text>
+                  <text x="586" y="319">queries</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="removal-label">
+              <g>
+                <rect x="664" y="268" width="145" height="56" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" text-anchor="middle" font-size="24px">
+                  <text x="736.5" y="290">Remove</text>
+                  <text x="736.5" y="319">blocked hits</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="fetch-label">
+              <g>
+                <rect x="817" y="268" width="141" height="56" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" text-anchor="middle" font-size="24px">
+                  <text x="887.5" y="290">Fetch other</text>
+                  <text x="887.5" y="319">pages</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="decision-rule">
+              <g>
+                <path d="M 529 350.5 L 949 350.5" fill="none" stroke="#e0e7e1" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+              </g>
+            </g>
+            <g data-cell-id="support-0">
+              <g>
+                <rect x="529" y="363" width="132" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" text-anchor="middle" font-size="24px">
+                  <text x="595" y="385">complete</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="verdict-0">
+              <g>
+                <rect x="529" y="419" width="132" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#087A2F" font-family="Arial" font-weight="bold" text-anchor="middle" font-size="24px">
+                  <text x="595" y="441">KEEP</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="support-1">
+              <g>
+                <rect x="673" y="363" width="132" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" text-anchor="middle" font-size="24px">
+                  <text x="739" y="385">partial</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="verdict-1">
+              <g>
+                <rect x="673" y="419" width="132" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#9A641D" font-family="Arial" font-weight="bold" text-anchor="middle" font-size="24px">
+                  <text x="739" y="441">REVISE</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="support-2">
+              <g>
+                <rect x="817" y="363" width="132" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" text-anchor="middle" font-size="24px">
+                  <text x="883" y="385">none</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="verdict-2">
+              <g>
+                <rect x="817" y="419" width="132" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#A14542" font-family="Arial" font-weight="bold" text-anchor="middle" font-size="24px">
+                  <text x="883" y="441">DROP</text>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="all-keep">
+            <g>
+              <rect x="511" y="466" width="456" height="27" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#59645D" font-family="Arial" text-anchor="middle" font-size="24px">
+                <text x="739" y="488">Only all-KEEP passes this gate</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="deterministic-mark">
+            <g transform="translate(0.5,0.5)">
+              <path d="M 516.17 535.43 L 525.47 544.73 L 542.83 524.27" fill="none" stroke="#087a2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+            </g>
+          </g>
+          <g data-cell-id="deterministic-title">
+            <g>
+              <rect x="562" y="512" width="400" height="30" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="26px">
+                <text x="562" y="536.5">Deterministic checks</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="deterministic-a">
+            <g>
+              <rect x="562" y="555" width="400" height="27" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#59645D" font-family="Arial" text-anchor="start" font-size="24px">
+                <text x="562" y="577">Duplicates &#xB7; temporal scope</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="deterministic-b">
+            <g>
+              <rect x="562" y="593" width="400" height="27" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#59645D" font-family="Arial" text-anchor="start" font-size="24px">
+                <text x="562" y="615">Source leakage &#xB7; answer leakage</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="joint-mark">
+            <g transform="translate(0.5,0.5)">
+              <path d="M 516.17 664.43 L 525.47 673.73 L 542.83 653.27" fill="none" stroke="#087a2f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+            </g>
+          </g>
+          <g data-cell-id="joint-title">
+            <g>
+              <rect x="562" y="641" width="400" height="30" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="26px">
+                <text x="562" y="665.5">Joint semantic review</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="batch-gate">
+            <g>
+              <rect x="511" y="710" width="456" height="118" rx="6.5" ry="6.5" fill="#ffffff" stroke="#aab5ae" stroke-width="2" stroke-dasharray="12 10" pointer-events="all"/>
+            </g>
+            <g data-cell-id="batch-title">
+              <g>
+                <rect x="528" y="718" width="422" height="30" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="26px">
+                  <text x="528" y="742.5">Batch acceptance</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="batch-gates-a">
+              <g>
+                <rect x="528" y="756" width="422" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#59645D" font-family="Arial" text-anchor="start" font-size="24px">
+                  <text x="528" y="778">Blind relabel &#xB7; overlap/leakage</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="batch-gates-b">
+              <g>
+                <rect x="528" y="792" width="422" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#59645D" font-family="Arial" text-anchor="start" font-size="24px">
+                  <text x="528" y="814">Quotas &#xB7; human acceptance</text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g data-cell-id="trajectory">
+          <g>
+            <rect x="1033" y="13" width="384" height="830" rx="24" ry="24" fill="#ffffff" stroke="#aab5ae" stroke-width="2.4" pointer-events="all"/>
+          </g>
+          <g data-cell-id="trajectory-number">
+            <g>
+              <ellipse cx="1079" cy="61" rx="20" ry="20" fill="#087a2f" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#FFFFFF" font-family="Arial" font-weight="bold" text-anchor="middle" font-size="26px">
+                <text x="1079" y="73">3</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="trajectory-title">
+            <g>
+              <rect x="1114" y="42" width="276" height="40" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g>
+              <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="32px">
+                <text x="1114" y="74.5">Harness traces</text>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="accepted-input">
+            <g>
+              <rect x="1057" y="114" width="336" height="175" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g data-cell-id="accepted-query">
+              <g transform="translate(0.5,0.5)">
+                <path d="M 1188.48 115.74 L 1238.06 115.74 L 1259.52 134.88 L 1259.52 199.26 L 1188.48 199.26 Z" fill="#f1fbf3" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 1238.06 115.74 L 1238.06 134.88 L 1259.52 134.88" fill="none" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 1199.58 148.8 L 1246.94 148.8" fill="none" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 1199.58 161.85 L 1246.94 161.85" fill="none" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                <path d="M 1199.58 174.9 L 1236.58 174.9" fill="none" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+              </g>
+            </g>
+            <g data-cell-id="accepted-query-label">
+              <g>
+                <rect x="1057" y="216" width="336" height="30" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="middle" font-size="26px">
+                  <text x="1225" y="240.5">Accepted query</text>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="query-only">
+              <g>
+                <rect x="1057" y="257" width="336" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#59645D" font-family="Arial" text-anchor="middle" font-size="24px">
+                  <text x="1225" y="279">Only the query enters</text>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="trace">
+            <g>
+              <rect x="1060" y="315" width="330" height="336" rx="6" ry="6" fill="#ffffff" stroke="#e0e7e1" stroke-width="2" pointer-events="all"/>
+            </g>
+            <g data-cell-id="researchspec">
+              <g>
+                <rect x="1078" y="323" width="294" height="45" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g data-cell-id="researchspec-icon">
+                <g transform="translate(0.5,0.5)">
+                  <path d="M 1086.58 323.86 L 1106.01 323.86 L 1114.42 333.32 L 1114.42 365.14 L 1086.58 365.14 Z" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                  <path d="M 1106.01 323.86 L 1106.01 333.32 L 1114.42 333.32" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                  <path d="M 1090.93 340.2 L 1105.43 340.2" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                </g>
+              </g>
+              <g data-cell-id="researchspec-label">
+                <g>
+                  <rect x="1137" y="327" width="230" height="34" fill="none" stroke="none" pointer-events="all"/>
+                </g>
+                <g>
+                  <g fill="#202823" font-family="Arial" font-weight="bold" text-anchor="start" font-size="26px">
+                    <text x="1137" y="353.5">ResearchSpec</text>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="parallel-research">
+              <g>
+                <rect x="1078" y="414" width="294" height="120" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g data-cell-id="section-1">
+                <g transform="translate(0.5,0.5)">
+                  <path d="M 1112.18 415.3 L 1151.71 415.3 L 1168.82 429.6 L 1168.82 477.7 L 1112.18 477.7 Z" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                  <path d="M 1151.71 415.3 L 1151.71 429.6 L 1168.82 429.6" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                  <path d="M 1121.03 440 L 1158.79 440" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                  <path d="M 1121.03 449.75 L 1150.53 449.75" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                </g>
+              </g>
+              <g data-cell-id="section-n">
+                <g transform="translate(0.5,0.5)">
+                  <rect x="1277.59" y="414.65" width="47.2" height="50.7" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" pointer-events="all"/>
+                  <rect x="1281.72" y="419.85" width="47.2" height="50.7" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" pointer-events="all"/>
+                  <path d="M 1287.03 425.7 L 1317.71 425.7 L 1334.82 440 L 1334.82 477.7 L 1287.03 477.7 Z" fill="#ffffff" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                  <path d="M 1317.71 425.7 L 1317.71 440 L 1334.82 440" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                  <path d="M 1295.88 450.4 L 1324.79 450.4" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                  <path d="M 1295.88 460.15 L 1316.53 460.15" fill="none" stroke="#4c7685" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+                </g>
+              </g>
+              <g data-cell-id="parallel-label">
+                <g>
+                  <rect x="1078" y="499" width="294" height="30" fill="none" stroke="none" pointer-events="all"/>
+                </g>
+                <g>
+                  <g fill="#202823" font-family="Arial" text-anchor="middle" font-size="26px">
+                    <text x="1225" y="523.5">Search + sections</text>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="assembly-edit">
+              <g>
+                <rect x="1078" y="565" width="294" height="35" rx="2.5" ry="2.5" fill="#ffffff" stroke="#e0e7e1" stroke-width="2" pointer-events="all"/>
+              </g>
+              <g data-cell-id="assembly-edit-label">
+                <g>
+                  <rect x="1090" y="567" width="270" height="30" fill="none" stroke="none" pointer-events="all"/>
+                </g>
+                <g>
+                  <g fill="#202823" font-family="Arial" text-anchor="middle" font-size="26px">
+                    <text x="1225" y="591.5">Assembly + edit</text>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g data-cell-id="recovery-label">
+              <g>
+                <rect x="1078" y="616" width="294" height="27" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#59645D" font-family="Arial" text-anchor="start" font-size="24px">
+                  <text x="1078" y="638">Recovery, when captured</text>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="trajectory-filter">
+            <g>
+              <rect x="1060" y="682" width="330" height="94" fill="none" stroke="none" pointer-events="all"/>
+            </g>
+            <g data-cell-id="filter">
+              <g transform="translate(0.5,0.5)">
+                <path d="M 1070.26 697.28 L 1130.74 697.28 L 1108.06 732.48 L 1108.06 753.6 L 1092.94 758.72 L 1092.94 732.48 Z" fill="#f1fbf3" stroke="#087a2f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="all"/>
+              </g>
+            </g>
+            <g data-cell-id="filter-caption">
+              <g>
+                <rect x="1158" y="688" width="216" height="85" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#202823" font-family="Arial" text-anchor="start" font-size="24px">
+                  <text x="1158" y="710">Role identity</text>
+                  <text x="1158" y="739">Tool closure</text>
+                  <text x="1158" y="768">Artifact validity</text>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g data-cell-id="trajectory-candidates">
+            <g>
+              <rect x="1060" y="802" width="330" height="40" rx="3.5" ry="3.5" fill="#f1fbf3" stroke="#16ad42" stroke-width="2" pointer-events="all"/>
+            </g>
+            <g data-cell-id="candidate-label">
+              <g>
+                <rect x="1068" y="807" width="314" height="30" fill="none" stroke="none" pointer-events="all"/>
+              </g>
+              <g>
+                <g fill="#087A2F" font-family="Arial" font-weight="bold" text-anchor="middle" font-size="26px">
+                  <text x="1225" y="831.5">Trajectory candidates</text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g data-cell-id="sources-to-bundle">
+          <g transform="translate(0.5,0.5)">
+            <path d="M 229 561 L 229 578.71" fill="none" stroke="#087a2f" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 229 590.21 L 223.25 578.71 L 234.75 578.71 Z" fill="#087a2f" stroke="#087a2f" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="search-to-removal">
+          <g transform="translate(0.5,0.5)">
+            <path d="M 603 218.5 L 688.71 218.5" fill="none" stroke="#087a2f" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 700.21 218.5 L 688.71 224.25 L 688.71 212.75 Z" fill="#087a2f" stroke="#087a2f" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="removal-to-fetch">
+          <g transform="translate(0.5,0.5)">
+            <path d="M 750 218.5 L 836.71 218.5" fill="none" stroke="#087a2f" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 848.21 218.5 L 836.71 224.25 L 836.71 212.75 Z" fill="#087a2f" stroke="#087a2f" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="support-decision-0">
+          <g>
+            <path d="M 595 390 L 595 406.19" fill="none" stroke="#087a2f" stroke-width="1.8" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 595 416.99 L 589.6 406.19 L 600.4 406.19 Z" fill="#087a2f" stroke="#087a2f" stroke-width="1.8" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="support-decision-1">
+          <g>
+            <path d="M 739 390 L 739 406.19" fill="none" stroke="#9a641d" stroke-width="1.8" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 739 416.99 L 733.6 406.19 L 744.4 406.19 Z" fill="#9a641d" stroke="#9a641d" stroke-width="1.8" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="support-decision-2">
+          <g>
+            <path d="M 883 390 L 883 406.19" fill="none" stroke="#a14542" stroke-width="1.8" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 883 416.99 L 877.6 406.19 L 888.4 406.19 Z" fill="#a14542" stroke="#a14542" stroke-width="1.8" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="spec-to-section-1">
+          <g>
+            <path d="M 1225 368 L 1225 392 L 1140.5 392 L 1140.5 400.76" fill="none" stroke="#087a2f" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 1140.5 411.76 L 1135 400.76 L 1146 400.76 Z" fill="#087a2f" stroke="#087a2f" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="spec-to-section-n">
+          <g>
+            <path d="M 1225 368 L 1225 392 L 1306.5 392 L 1306.5 400.76" fill="none" stroke="#087a2f" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 1306.5 411.76 L 1301 400.76 L 1312 400.76 Z" fill="#087a2f" stroke="#087a2f" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="sections-to-assembly">
+          <g>
+            <path d="M 1225 534 L 1225 551.76" fill="none" stroke="#087a2f" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 1225 562.76 L 1219.5 551.76 L 1230.5 551.76 Z" fill="#087a2f" stroke="#087a2f" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="query-to-harness">
+          <g transform="translate(0.5,0.5)">
+            <path d="M 1225 289 L 1225 300.7" fill="none" stroke="#087a2f" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 1225 312.2 L 1219.25 300.7 L 1230.75 300.7 Z" fill="#087a2f" stroke="#087a2f" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="trace-to-filter">
+          <g transform="translate(0.5,0.5)">
+            <path d="M 1225 651 L 1225 667.71" fill="none" stroke="#087a2f" stroke-width="2.5" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 1225 679.21 L 1219.25 667.71 L 1230.75 667.71 Z" fill="#087a2f" stroke="#087a2f" stroke-width="2.5" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="filter-to-candidates">
+          <g>
+            <path d="M 1225 776 L 1225 788.76" fill="none" stroke="#087a2f" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 1225 799.76 L 1219.5 788.76 L 1230.5 788.76 Z" fill="#087a2f" stroke="#087a2f" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="primary-task-bundle">
+          <g transform="translate(0.5,0.5)">
+            <path d="M 445 440.45 L 469.22 440.45" fill="none" stroke="#202823" stroke-width="3.2" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 481.42 440.45 L 469.22 446.55 L 469.22 434.35 Z" fill="#202823" stroke="#202823" stroke-width="3.2" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="primary-accepted-query">
+          <g transform="translate(0.5,0.5)">
+            <path d="M 993 440.45 L 1017.22 440.45" fill="none" stroke="#202823" stroke-width="3.2" stroke-miterlimit="10" pointer-events="stroke"/>
+            <path d="M 1029.42 440.45 L 1017.22 446.55 L 1017.22 434.35 Z" fill="#202823" stroke="#202823" stroke-width="3.2" stroke-miterlimit="10" pointer-events="all"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <title id="figure-title">Evidence-grounded research data construction</title>
+  <desc id="figure-description">Independent CC-BY articles or frozen multi-source briefs condition query and hidden rubric synthesis. Task validation includes an article-route evidence check and batch-specific acceptance. Accepted queries drive the research harness; recorded trajectories are filtered for roles, tool closure, and valid artifacts. Candidates are distinct from a training release.</desc>
+</svg>
