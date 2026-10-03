@@ -40,4 +40,4 @@ SHA-256. Live asset/content verification follows Pages deployment.
 
 ### Commit Hash
 
-Pending.
+`6ceef71` — Sync blog figures and full citation with arXiv report.
