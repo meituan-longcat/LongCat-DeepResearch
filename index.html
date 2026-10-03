@@ -22,7 +22,7 @@
     <meta property="og:image:height" content="1305">
     <meta property="og:image:alt" content="LongCat-DeepResearch scores across three public deep-research benchmarks.">
     <meta property="article:published_time" content="2026-09-23T00:00:00+08:00">
-    <meta property="article:modified_time" content="2026-09-23T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-10-04T00:00:00+08:00">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Introducing LongCat-DeepResearch">
     <meta name="twitter:description" content="The technical report and open-source research system for LongCat-DeepResearch from the Meituan LongCat Team.">
@@ -34,7 +34,7 @@
         "headline": "Introducing LongCat-DeepResearch",
         "description": "LongCat-DeepResearch coordinates exploratory planning, independent section research, direct assembly, and global-to-local editing through an executable ResearchSpec.",
         "datePublished": "2026-09-23",
-        "dateModified": "2026-09-23",
+        "dateModified": "2026-10-04",
         "url": "https://meituan-longcat.github.io/LongCat-DeepResearch/",
         "mainEntityOfPage": {
           "@type": "WebPage",
@@ -104,6 +104,7 @@
         <div class="hero-links">
           <a class="link-btn" href="https://github.com/meituan-longcat/LongCat-DeepResearch" target="_blank" rel="noreferrer"><span class="link-icon">⌘</span>GitHub</a>
           <a class="link-btn" href="https://arxiv.org/abs/2609.36071" target="_blank" rel="noreferrer"><span class="link-icon">▧</span>Technical report</a>
+          <a class="link-btn" href="https://arxiv.org/pdf/2609.36071" target="_blank" rel="noreferrer"><span class="link-icon">▤</span>PDF</a>
           <a class="link-btn" href="https://huggingface.co/papers/2609.36071" target="_blank" rel="noreferrer"><span class="link-icon">◫</span>Hugging Face</a>
         </div>
       </header>
@@ -135,13 +136,13 @@
       </section>
       <section class="content-section">
         <figure class="report-figure reveal" id="harness-figure">
-          <img class="harness-desktop" src="./assets/research-harness-green.svg" alt="Three stages: explore and plan, research and write sections independently, then assemble and edit the report.">
+          <img class="harness-desktop" src="./assets/research-harness-arxiv-2609.36071.svg" alt="Three stages: explore and plan, research and write sections independently, then assemble and edit the report.">
           <div class="harness-mobile">
-            <img src="./assets/research-harness-green.svg#plan" width="520" height="853" style="aspect-ratio:520 / 853;object-fit:fill" alt="Harness stage 1: explore and plan">
+            <img src="./assets/research-harness-arxiv-2609.36071.svg#plan" width="389" height="640" style="aspect-ratio:389 / 640;object-fit:fill" alt="Harness stage 1: explore and plan">
             <div class="data-synthesis-transfer" aria-hidden="true">Query + ResearchSpec ↓</div>
-            <img src="./assets/research-harness-green.svg#research" width="504" height="853" style="aspect-ratio:504 / 853;object-fit:fill" alt="Harness stage 2: research and write sections">
+            <img src="./assets/research-harness-arxiv-2609.36071.svg#research" width="376" height="640" style="aspect-ratio:376 / 640;object-fit:fill" alt="Harness stage 2: research and write sections">
             <div class="data-synthesis-transfer" aria-hidden="true">Citation-bearing sections ↓</div>
-            <img src="./assets/research-harness-green.svg#compose" width="520" height="853" style="aspect-ratio:520 / 853;object-fit:fill" alt="Harness stage 3: assemble and edit">
+            <img src="./assets/research-harness-arxiv-2609.36071.svg#compose" width="389" height="640" style="aspect-ratio:389 / 640;object-fit:fill" alt="Harness stage 3: assemble and edit">
           </div>
           <figcaption>Figure 2. The LongCat-DeepResearch harness.</figcaption>
         </figure>
@@ -162,13 +163,13 @@
           <p><strong>Validate the task before collecting a trajectory.</strong> Bounded searchability checks look for alternative support after excluding the construction article. Additional checks cover duplicate criteria, answer leakage, temporal scope, and question-rubric alignment. KEEP, REVISE, and DROP decisions preserve the distinction between complete, partial, and missing support.</p>
         </div>
         <figure class="report-figure data-synthesis" id="data-synthesis">
-          <img class="data-synthesis-desktop" src="./assets/data_synthesis_flow.svg" alt="Evidence-grounded research-task construction, validation, trajectory collection, and structural filtering.">
+          <img class="data-synthesis-desktop" src="./assets/data-synthesis-arxiv-2609.36071.svg" alt="Evidence-grounded research-task construction, validation, trajectory collection, and structural filtering.">
           <div class="data-synthesis-mobile">
-            <img src="./assets/data_synthesis_flow.svg#grounding" width="440" height="838" style="aspect-ratio:440 / 838;object-fit:fill" alt="Stage 1: grounded task synthesis">
+            <img src="./assets/data-synthesis-arxiv-2609.36071.svg#grounding" width="363" height="711" style="aspect-ratio:363 / 711;object-fit:fill" alt="Stage 1: grounded task synthesis">
             <div class="data-synthesis-transfer" aria-hidden="true"><span>Task + hidden rubric bundle</span><span class="data-synthesis-transfer__arrow">↓</span></div>
-            <img src="./assets/data_synthesis_flow.svg#validation" width="516" height="838" style="aspect-ratio:516 / 838;object-fit:fill" alt="Stage 2: task validation">
+            <img src="./assets/data-synthesis-arxiv-2609.36071.svg#validation" width="402" height="711" style="aspect-ratio:402 / 711;object-fit:fill" alt="Stage 2: task validation">
             <div class="data-synthesis-transfer" aria-hidden="true"><span>Accepted query</span><span class="data-synthesis-transfer__arrow">↓</span></div>
-            <img src="./assets/data_synthesis_flow.svg#trajectory" width="392" height="838" style="aspect-ratio:392 / 838;object-fit:fill" alt="Stage 3: trajectory collection and filtering">
+            <img src="./assets/data-synthesis-arxiv-2609.36071.svg#trajectory" width="353" height="711" style="aspect-ratio:353 / 711;object-fit:fill" alt="Stage 3: trajectory collection and filtering">
           </div>
           <figcaption>Figure 3. Evidence-grounded construction of research tasks and trajectories.</figcaption>
         </figure>
@@ -280,14 +281,26 @@
       <section class="group-heading citation-heading" id="citation"><h2 class="group-heading__title reveal">Citation</h2></section>
       <section class="content-section citation-section">
         <div class="prose reveal"><p>If you find this project useful, please cite:</p></div>
-        <pre class="citation-block reveal"><code>@techreport{longcatdeepresearch2026,
-  title  = {LongCat-DeepResearch Technical Report},
+        <pre class="citation-block reveal"><code>@misc{meituanlongcatteam2026longcatdeepresearchtechnicalreport,
+  title={LongCat-DeepResearch Technical Report},
   author = {
     Meituan LongCat Team and He Zhu and Yue Xu and
+    Wanli Wu and Haolin Ren and Yuxin Bian and
+    Jiarui Zhao and Rongzhi Zhang and Quanchi Weng and
+    Jinghao Cui and Yu Fan and Yuhan Liu and
+    Yunhu Ye and Jiyuan Ren and Fengcheng Yuan and
+    Zhao Yang and Jiacheng Zhang and Yuchuan Dai and
+    Ruixuan Xiao and Haozhe Sun and Xiangyuan Liu and
+    Cheng Sun and Yao Du and Yiming Hao and
+    Hongbo Guo and Shuo He and Lei Wang and
     Xunliang Cai and Yan Chen and Fan Yang and
-    Lingchuan Liu and others
+    Lingchuan Liu
   },
-  year   = {2026}
+  year={2026},
+  eprint={2609.36071},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2609.36071},
 }</code></pre>
       </section>
       <footer>LongCat-DeepResearch · Meituan LongCat Team</footer>
