@@ -27,7 +27,7 @@ is unchanged. git diff --check passed. Live verification follows deployment.
 
 ### Commit Hash
 
-Pending.
+`0d9a3c0` — Keep one technical report button in blog header.
 
 ## 2026-10-04 — Synchronize arXiv figures and citation
 
