@@ -1,5 +1,34 @@
 # Development Log
 
+## 2026-10-05 — Keep one technical report entry
+
+### Question
+
+Keep only one of the PDF and Technical report buttons.
+
+### Analysis / Root Cause
+
+Both hero buttons led to the same paper through different arXiv endpoints.
+
+### Solution
+
+Remove the separate PDF button and retain Technical report linked to the arXiv
+abstract, which also provides PDF access.
+
+### Files Changed
+
+- `index.html`
+- `docs/dev.md`
+
+### Verification
+
+The hero contains exactly one paper entry, and the Technical report destination
+is unchanged. git diff --check passed. Live verification follows deployment.
+
+### Commit Hash
+
+`0d9a3c0` — Keep one technical report button in blog header.
+
 ## 2026-10-04 — Synchronize arXiv figures and citation
 
 ### Question
