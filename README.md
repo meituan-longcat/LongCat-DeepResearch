@@ -2,15 +2,26 @@
 
 <p align="center"><sub><strong>Plan globally. Research independently. Synthesize coherently.</strong></sub></p>
 
-<p align="center"><a href="https://meituan-longcat.github.io/LongCat-DeepResearch/"><img alt="Project blog" src="https://img.shields.io/badge/Blog-Project_Page-2cb85b?style=for-the-badge"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/technical_report/LongCat-DeepResearch.pdf"><img alt="Paper PDF" src="https://img.shields.io/badge/Paper-PDF-d9534f?style=for-the-badge"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-Repository-24292f?style=for-the-badge&amp;logo=github"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/License-MIT-5b6ea6?style=for-the-badge"></a></p>
+<p align="center"><a href="https://meituan-longcat.github.io/LongCat-DeepResearch/"><img alt="Project blog" src="https://img.shields.io/badge/Blog-Project_Page-2cb85b?style=for-the-badge"></a>&nbsp;<a href="https://arxiv.org/abs/2609.36071"><img alt="Technical report (arXiv)" src="https://img.shields.io/badge/Paper-arXiv-d9534f?style=for-the-badge"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-Repository-24292f?style=for-the-badge&amp;logo=github"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/License-MIT-5b6ea6?style=for-the-badge"></a></p>
 
 <p align="center"><strong>English</strong> | <a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/README_zh-CN.md">简体中文</a></p>
 
 ## **Overview**
 
-This repository open-sources the LongCat-DeepResearch harness for open-ended research. It captures evolving research requirements in an executable ResearchSpec, supports independent section research and writing, and makes targeted revisions to the assembled report instead of repeatedly rewriting it. Users can run deep-research tasks with their own services by implementing `llm`, `web_search`, and `web_fetch` according to the backend contract. Paired with our LongCat-2.0-based model enhanced for deep research, the complete system outperforms the Deep Research offerings from ChatGPT, Claude, and Gemini on DeepResearchBench, DeepResearchBench II, and ResearchRubrics.
+This repository open-sources the LongCat-DeepResearch harness for open-ended research. It captures evolving research requirements in an executable ResearchSpec, supports independent section research and writing, and makes targeted revisions to the assembled report instead of repeatedly rewriting it. Users can run deep-research tasks with their own services by implementing `llm`, `web_search`, and `web_fetch` according to the backend contract. Paired with our LongCat-2.0-based model enhanced for deep research, the complete system has the highest overall score among the four systems compared in the technical report on DeepResearchBench, DeepResearchBench II, and ResearchRubrics.
 
-<span style="display:inline-block;width:660px;max-width:100%">![LongCat-DeepResearch benchmark overview](assets/benchmark_overview.png)</span>
+<p align="center"><img src="assets/benchmark_overview.png" width="660" alt="LongCat-DeepResearch benchmark overview"></p>
+
+| System | DeepResearchBench | DeepResearchBench II | ResearchRubrics |
+|---|---:|---:|---:|
+| **LongCat-DeepResearch** | **55.25** | **51.35** | **79.83** |
+| ChatGPT-DeepResearch | 54.95 | 47.16 | 74.21 |
+| Claude-DeepResearch | 53.43 | 48.18 | 72.91 |
+| Gemini-DeepResearch | 50.21 | 46.72 | 64.92 |
+
+These scores compare complete systems with their native tools and budgets; they
+do not isolate model quality. See the [technical report](https://arxiv.org/abs/2609.36071)
+for evaluation settings and scored coverage.
 
 ## **Research Harness**
 
@@ -196,7 +207,7 @@ See [the complete backend interface](docs/BACKEND_INTERFACE.md) for field-level 
 ├── docs/                   # Detailed backend contract
 ├── longcat_deepresearch/   # Installable Python package and CLI
 ├── scripts/                # CLI and release checks
-├── technical_report/       # Latest technical report PDF
+├── technical_report/       # Bundled technical report PDF
 ├── tests/                  # Offline interface and end-to-end tests
 └── pyproject.toml          # Package metadata and development tooling
 ~~~
@@ -225,14 +236,26 @@ Do not disclose vulnerabilities in public issues. Use the repository's private s
 If you find this project useful, please cite:
 
 ```bibtex
-@techreport{longcatdeepresearch2026,
-  title  = {LongCat-DeepResearch Technical Report},
+@misc{meituanlongcatteam2026longcatdeepresearchtechnicalreport,
+  title={LongCat-DeepResearch Technical Report},
   author = {
     Meituan LongCat Team and He Zhu and Yue Xu and
+    Wanli Wu and Haolin Ren and Yuxin Bian and
+    Jiarui Zhao and Rongzhi Zhang and Quanchi Weng and
+    Jinghao Cui and Yu Fan and Yuhan Liu and
+    Yunhu Ye and Jiyuan Ren and Fengcheng Yuan and
+    Zhao Yang and Jiacheng Zhang and Yuchuan Dai and
+    Ruixuan Xiao and Haozhe Sun and Xiangyuan Liu and
+    Cheng Sun and Yao Du and Yiming Hao and
+    Hongbo Guo and Shuo He and Lei Wang and
     Xunliang Cai and Yan Chen and Fan Yang and
-    Lingchuan Liu and others
+    Lingchuan Liu
   },
-  year   = {2026}
+  year={2026},
+  eprint={2609.36071},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2609.36071},
 }
 ```
 
