@@ -46,7 +46,13 @@ Figure provenance:
 
 ### Verification
 
-Pending image, Markdown reference, citation, and release preflight checks.
+Both 2400px diagrams were rendered from the arXiv figure PDFs and visually
+inspected. GitHub Markdown API rendering passed for both READMEs, including
+image references and the benchmark width. Citations match official arXiv BibTeX
+after whitespace normalization; local references exist. git diff --check and
+open_source_preflight.py passed. The initial raw-HTML text assertion did not
+account for syntax-highlighting spans; the parser-based check passed. Remote
+content checks follow the merge.
 
 ### Commit Hash
 
