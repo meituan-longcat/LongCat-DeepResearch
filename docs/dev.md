@@ -50,4 +50,4 @@ Pending image, Markdown reference, citation, and release preflight checks.
 
 ### Commit Hash
 
-Pending.
+`90d31d1` — Sync bilingual READMEs and figures with arXiv report.
