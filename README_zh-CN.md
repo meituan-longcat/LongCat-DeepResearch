@@ -2,15 +2,25 @@
 
 <p align="center"><sub><strong>全局规划，独立研究，连贯综合。</strong></sub></p>
 
-<p align="center"><a href="https://meituan-longcat.github.io/LongCat-DeepResearch/"><img alt="项目 Blog" src="https://img.shields.io/badge/Blog-Project_Page-2cb85b?style=for-the-badge"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/technical_report/LongCat-DeepResearch.pdf"><img alt="论文 PDF" src="https://img.shields.io/badge/Paper-PDF-d9534f?style=for-the-badge"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch"><img alt="GitHub 仓库" src="https://img.shields.io/badge/GitHub-Repository-24292f?style=for-the-badge&amp;logo=github"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/LICENSE"><img alt="MIT 许可证" src="https://img.shields.io/badge/License-MIT-5b6ea6?style=for-the-badge"></a></p>
+<p align="center"><a href="https://meituan-longcat.github.io/LongCat-DeepResearch/"><img alt="项目 Blog" src="https://img.shields.io/badge/Blog-Project_Page-2cb85b?style=for-the-badge"></a>&nbsp;<a href="https://arxiv.org/abs/2609.36071"><img alt="技术报告（arXiv）" src="https://img.shields.io/badge/Paper-arXiv-d9534f?style=for-the-badge"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch"><img alt="GitHub 仓库" src="https://img.shields.io/badge/GitHub-Repository-24292f?style=for-the-badge&amp;logo=github"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/LICENSE"><img alt="MIT 许可证" src="https://img.shields.io/badge/License-MIT-5b6ea6?style=for-the-badge"></a></p>
 
 <p align="center"><a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/README.md">English</a> | <strong>简体中文</strong></p>
 
 ## **项目概览**
 
-本仓库开源 LongCat-DeepResearch 的研究 Harness，用于执行开放式深度研究任务。它通过可执行的 ResearchSpec 记录逐步显现的研究需求，支持独立的分节调研与写作，并对组装后的报告进行有针对性的修订，减少反复重写整篇报告。用户按 Backend 协议实现 `llm`、`web_search` 和 `web_fetch` 三个方法，即可接入自己的服务运行深度研究任务。结合我们基于 LongCat-2.0、增强了深度研究能力的模型后，完整系统在 DeepResearchBench、DeepResearchBench II 和 ResearchRubrics 上均超过了 ChatGPT、Claude 和 Gemini 的 Deep Research 功能。
+本仓库开源 LongCat-DeepResearch 的研究 Harness，用于执行开放式深度研究任务。它通过可执行的 ResearchSpec 记录逐步显现的研究需求，支持独立的分节调研与写作，并对组装后的报告进行有针对性的修订，减少反复重写整篇报告。用户按 Backend 协议实现 `llm`、`web_search` 和 `web_fetch` 三个方法，即可接入自己的服务运行深度研究任务。结合我们基于 LongCat-2.0、增强了深度研究能力的模型后，完整系统在技术报告对比的四个系统中，在 DeepResearchBench、DeepResearchBench II 和 ResearchRubrics 上均取得最高总体分数。
 
-<span style="display:inline-block;width:660px;max-width:100%">![LongCat-DeepResearch 评测概览](assets/benchmark_overview.png)</span>
+<p align="center"><img src="assets/benchmark_overview.png" width="660" alt="LongCat-DeepResearch 评测概览"></p>
+
+| 系统 | DeepResearchBench | DeepResearchBench II | ResearchRubrics |
+|---|---:|---:|---:|
+| **LongCat-DeepResearch** | **55.25** | **51.35** | **79.83** |
+| ChatGPT-DeepResearch | 54.95 | 47.16 | 74.21 |
+| Claude-DeepResearch | 53.43 | 48.18 | 72.91 |
+| Gemini-DeepResearch | 50.21 | 46.72 | 64.92 |
+
+上述结果对比使用各自原生工具和预算的完整系统，不单独衡量模型能力。
+评测设置和评分覆盖范围见[技术报告](https://arxiv.org/abs/2609.36071)。
 
 ## **Research Harness**
 
@@ -196,7 +206,7 @@ Backend 是 Harness 与外部服务之间的传输边界：Harness 决定何时�
 ├── docs/                   # 详细 Backend 协议说明
 ├── longcat_deepresearch/   # 可安装的 Python 包和命令行入口
 ├── scripts/                # 命令行入口和发布检查
-├── technical_report/       # 最新技术报告 PDF
+├── technical_report/       # 随仓库附带的技术报告 PDF
 ├── tests/                  # 离线接口测试和端到端测试
 └── pyproject.toml          # 包元数据和开发工具配置
 ~~~
@@ -225,14 +235,26 @@ Backend 必须将检索内容视为不可信输入，阻止访问私网和链路
 如果本项目对你的工作有帮助，请引用：
 
 ```bibtex
-@techreport{longcatdeepresearch2026,
-  title  = {LongCat-DeepResearch Technical Report},
+@misc{meituanlongcatteam2026longcatdeepresearchtechnicalreport,
+  title={LongCat-DeepResearch Technical Report},
   author = {
     Meituan LongCat Team and He Zhu and Yue Xu and
+    Wanli Wu and Haolin Ren and Yuxin Bian and
+    Jiarui Zhao and Rongzhi Zhang and Quanchi Weng and
+    Jinghao Cui and Yu Fan and Yuhan Liu and
+    Yunhu Ye and Jiyuan Ren and Fengcheng Yuan and
+    Zhao Yang and Jiacheng Zhang and Yuchuan Dai and
+    Ruixuan Xiao and Haozhe Sun and Xiangyuan Liu and
+    Cheng Sun and Yao Du and Yiming Hao and
+    Hongbo Guo and Shuo He and Lei Wang and
     Xunliang Cai and Yan Chen and Fan Yang and
-    Lingchuan Liu and others
+    Lingchuan Liu
   },
-  year   = {2026}
+  year={2026},
+  eprint={2609.36071},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2609.36071},
 }
 ```
 
