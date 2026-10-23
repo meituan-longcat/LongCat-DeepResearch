@@ -1,6 +1,6 @@
 ![LongCat-DeepResearch](assets/longcat_logo.png)
 
-<p align="center"><sub><strong>全局规划，独立研究，连贯综合。</strong></sub></p>
+<p align="center"><sub><strong>LongCat-DeepResearch：开源多智能体深度研究 Harness，覆盖研究规划、独立分节调研与针对性报告修订。</strong></sub></p>
 
 <p align="center"><a href="https://meituan-longcat.github.io/LongCat-DeepResearch/"><img alt="项目 Blog" src="https://img.shields.io/badge/Blog-Project_Page-2cb85b?style=for-the-badge"></a>&nbsp;<a href="https://arxiv.org/abs/2609.36071"><img alt="技术报告（arXiv）" src="https://img.shields.io/badge/Paper-arXiv-d9534f?style=for-the-badge"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch"><img alt="GitHub 仓库" src="https://img.shields.io/badge/GitHub-Repository-24292f?style=for-the-badge&amp;logo=github"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/LICENSE"><img alt="MIT 许可证" src="https://img.shields.io/badge/License-MIT-5b6ea6?style=for-the-badge"></a></p>
 
@@ -8,7 +8,7 @@
 
 ## **项目概览**
 
-本仓库开源 LongCat-DeepResearch 的研究 Harness，用于执行开放式深度研究任务。它通过可执行的 ResearchSpec 记录逐步显现的研究需求，支持独立的分节调研与写作，并对组装后的报告进行有针对性的修订，减少反复重写整篇报告。用户按 Backend 协议实现 `llm`、`web_search` 和 `web_fetch` 三个方法，即可接入自己的服务运行深度研究任务。结合我们基于 LongCat-2.0、增强了深度研究能力的模型后，完整系统在技术报告对比的四个系统中，在 DeepResearchBench、DeepResearchBench II 和 ResearchRubrics 上均取得最高总体分数。
+本仓库开源 LongCat-DeepResearch 的多智能体深度研究 Harness。它通过可执行的 ResearchSpec 记录逐步显现的研究需求，支持独立的分节调研与写作，并对组装后的报告进行有针对性的修订，减少反复重写整篇报告。用户按 Backend 协议实现 `llm`、`web_search` 和 `web_fetch` 三个方法，即可接入自己的服务运行深度研究任务。结合我们基于 LongCat-2.0、增强了深度研究能力的模型后，完整系统在技术报告对比的四个系统中，在 DeepResearchBench、DeepResearchBench II 和 ResearchRubrics 上均取得最高总体分数。
 
 <p align="center"><img src="assets/benchmark_overview.png" width="660" alt="LongCat-DeepResearch 评测概览"></p>
 
@@ -31,6 +31,10 @@ Harness 包含三个阶段：
 1. <strong>探索与规划。</strong>多个 Planner 调研问题和早期来源；Judge 合并方案，Critic 查找缺口，Reviser 生成可执行的 ResearchSpec。
 2. <strong>分节研究。</strong>独立 Researcher 在分离的上下文中调研并撰写指定章节，同时保留完整任务书。
 3. <strong>组装与编辑。</strong>完整章节直接组装；Global Editor 识别内容归属和一致性问题，Local Editor 执行章节级修订。
+
+## **研究规划与报告修订**
+
+开放式问题通常没有固定大纲。LongCat-DeepResearch 先做规划：多个 Planner 探索问题与来源，再由 Judge、Critic 和 Reviser 收敛为可执行的 ResearchSpec。每个章节在独立上下文中调研和写作，详细的证据不会挤占同一份共享历史，共享的任务书则让各章节保持对齐。直接组装后，Global Editor 诊断跨章节问题，Local Editor 按章节执行修订。这种全局到局部的循环针对一致性和内容归属，无需重新生成整篇报告。详见[技术报告](https://arxiv.org/abs/2609.36071)。
 
 ## **研究数据构建**
 

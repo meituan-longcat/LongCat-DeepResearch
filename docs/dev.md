@@ -57,3 +57,42 @@ content checks follow the merge.
 ### Commit Hash
 
 `90d31d1` — Sync bilingual READMEs and figures with arXiv report.
+
+## 2026-10-23 — Improve README discoverability
+
+### Question
+
+Make the public READMEs clearer about what LongCat-DeepResearch is and how
+planning, independent section research, and report revision work.
+
+### Analysis / Root Cause
+
+The tagline and overview were accurate but general, so readers and searches had
+little descriptive text identifying the project as a multi-agent deep research
+harness. The harness stages were documented, but the rationale for separate
+section contexts and global-to-local revision was not stated in one place.
+
+### Solution
+
+Rewrite the tagline and first overview sentence around an open-source multi-agent
+deep research harness. Keep the existing structure, add a short "Research
+Planning and Report Revision" subsection after the harness stages, link the
+canonical arXiv report, and mirror the change in Chinese. No figures, benchmark
+numbers, or performance claims changed.
+
+### Files Changed
+
+- `README.md`
+- `README_zh-CN.md`
+- `docs/dev.md`
+
+### Validation
+
+Both READMEs have matching taglines, overview sentences, and subsection
+structure. The English subsection is under 100 words. git diff --check passed.
+
+### Commit Hash
+
+Containing commit: `Clarify research planning and report revision in bilingual README`.
+
+Planner verification (2026-10-23): checked release scope against README and source; desktop 1440px/mobile 390px rendering and image loading pass. Repository metadata now includes description, six relevant topics and the project homepage.

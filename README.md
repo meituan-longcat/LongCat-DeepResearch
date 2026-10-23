@@ -1,6 +1,6 @@
 ![LongCat-DeepResearch](assets/longcat_logo.png)
 
-<p align="center"><sub><strong>Plan globally. Research independently. Synthesize coherently.</strong></sub></p>
+<p align="center"><sub><strong>LongCat-DeepResearch: an open-source multi-agent deep research harness for research planning, independent section research, and targeted report revision.</strong></sub></p>
 
 <p align="center"><a href="https://meituan-longcat.github.io/LongCat-DeepResearch/"><img alt="Project blog" src="https://img.shields.io/badge/Blog-Project_Page-2cb85b?style=for-the-badge"></a>&nbsp;<a href="https://arxiv.org/abs/2609.36071"><img alt="Technical report (arXiv)" src="https://img.shields.io/badge/Paper-arXiv-d9534f?style=for-the-badge"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-Repository-24292f?style=for-the-badge&amp;logo=github"></a>&nbsp;<a href="https://github.com/meituan-longcat/LongCat-DeepResearch/blob/main/LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/License-MIT-5b6ea6?style=for-the-badge"></a></p>
 
@@ -8,7 +8,7 @@
 
 ## **Overview**
 
-This repository open-sources the LongCat-DeepResearch harness for open-ended research. It captures evolving research requirements in an executable ResearchSpec, supports independent section research and writing, and makes targeted revisions to the assembled report instead of repeatedly rewriting it. Users can run deep-research tasks with their own services by implementing `llm`, `web_search`, and `web_fetch` according to the backend contract. Paired with our LongCat-2.0-based model enhanced for deep research, the complete system has the highest overall score among the four systems compared in the technical report on DeepResearchBench, DeepResearchBench II, and ResearchRubrics.
+This repository open-sources the multi-agent deep research harness of LongCat-DeepResearch. It captures evolving research requirements in an executable ResearchSpec, supports independent section research and writing, and makes targeted revisions to the assembled report instead of repeatedly rewriting it. Users can run deep-research tasks with their own services by implementing `llm`, `web_search`, and `web_fetch` according to the backend contract. Paired with our LongCat-2.0-based model enhanced for deep research, the complete system has the highest overall score among the four systems compared in the technical report on DeepResearchBench, DeepResearchBench II, and ResearchRubrics.
 
 <p align="center"><img src="assets/benchmark_overview.png" width="660" alt="LongCat-DeepResearch benchmark overview"></p>
 
@@ -32,6 +32,10 @@ The harness follows three stages:
 1. <strong>Explore and plan.</strong> Multiple planners inspect the problem and early sources. A judge merges proposals, a critic identifies gaps, and a reviser produces the executable ResearchSpec.
 2. <strong>Research sections.</strong> Independent researchers investigate and write assigned sections in separate contexts while retaining the full specification.
 3. <strong>Assemble and edit.</strong> Completed sections are assembled directly. A global editor identifies ownership and consistency issues, and local editors apply section-scoped revisions.
+
+## **Research Planning and Report Revision**
+
+Open-ended questions rarely arrive with a fixed outline. LongCat-DeepResearch plans first: multiple planners explore the problem and sources, then a judge, critic, and reviser converge on an executable ResearchSpec. Each section is researched and written in its own context, so detailed evidence does not crowd one shared history, while the shared specification keeps sections aligned. After direct assembly, a global editor diagnoses cross-section issues and local editors apply section-level revisions. This global-to-local loop targets consistency and ownership without regenerating the whole report. See the [technical report](https://arxiv.org/abs/2609.36071) for details.
 
 ## **Research Data Construction**
 
