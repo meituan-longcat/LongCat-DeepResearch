@@ -1,5 +1,45 @@
 # Development Log
 
+## 2026-10-23 — Clarify title, descriptions, and release boundary
+
+### Question
+
+Make the article title and descriptions name the project as a multi-agent deep
+research harness, and state what the repository actually releases.
+
+### Analysis / Root Cause
+
+The HTML title, OG/Twitter titles, and JSON-LD headline used only "Introducing
+LongCat-DeepResearch", which did not describe the harness. The opening described
+the system but not the boundary between the open-source harness and
+user-supplied services.
+
+### Solution
+
+Use "LongCat-DeepResearch: Multi-Agent Deep Research Harness" in the HTML title,
+OG/Twitter title, and JSON-LD headline. Add a visible one-sentence subtitle,
+align the descriptions around an open-source harness for research planning,
+independent section research, and targeted report revision, and state near the
+opening that the repository releases only the harness while users supply their
+own model, search, and page-fetch services. Update dateModified, article
+modified time, and sitemap lastmod to 2026-10-23; datePublished is unchanged. No
+CSS, figures, benchmarks, or scientific claims changed.
+
+### Files Changed
+
+- `index.html`
+- `sitemap.xml`
+- `docs/dev.md`
+
+### Validation
+
+HTML and JSON-LD parse. Title, OG/Twitter title, JSON-LD headline, subtitle, and
+descriptions are consistent. Fragment links resolve. git diff --check passed.
+
+### Commit Hash
+
+Containing commit: `Describe the deep research harness in site discovery metadata`.
+
 ## 2026-10-05 — Keep one technical report entry
 
 ### Question
@@ -70,3 +110,5 @@ SHA-256. Live asset/content verification follows Pages deployment.
 ### Commit Hash
 
 `6ceef71` — Sync blog figures and full citation with arXiv report.
+
+Planner verification (2026-10-23): checked release scope against README and source; desktop 1440px/mobile 390px rendering and image loading pass. Repository metadata now includes description, six relevant topics and the project homepage.

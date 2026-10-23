@@ -4,37 +4,37 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light">
-    <title>Introducing LongCat-DeepResearch</title>
-    <meta name="description" content="LongCat-DeepResearch coordinates exploratory planning, independent section research, direct assembly, and global-to-local editing through an executable ResearchSpec.">
+    <title>LongCat-DeepResearch: Multi-Agent Deep Research Harness</title>
+    <meta name="description" content="The open-source LongCat-DeepResearch harness supports multi-agent research planning, independent section research, and targeted report revision.">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="zvoj_sfBALRu7CNCItWzh6jYZRnvONIIh5qYI2jZwXE">
     <meta name="author" content="Meituan LongCat Team">
-    <meta name="keywords" content="deep research, research agents, LongCat, ResearchSpec, technical report">
+    <meta name="keywords" content="deep research, multi-agent deep research, research agents, LongCat, ResearchSpec, technical report">
     <link rel="canonical" href="https://meituan-longcat.github.io/LongCat-DeepResearch/">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Meituan LongCat Team">
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Introducing LongCat-DeepResearch">
-    <meta property="og:description" content="The technical report and open-source research system for LongCat-DeepResearch from the Meituan LongCat Team.">
+    <meta property="og:title" content="LongCat-DeepResearch: Multi-Agent Deep Research Harness">
+    <meta property="og:description" content="The open-source LongCat-DeepResearch harness supports multi-agent research planning, independent section research, and targeted report revision.">
     <meta property="og:url" content="https://meituan-longcat.github.io/LongCat-DeepResearch/">
     <meta property="og:image" content="https://meituan-longcat.github.io/LongCat-DeepResearch/assets/recorded-overview.png">
     <meta property="og:image:width" content="3000">
     <meta property="og:image:height" content="1305">
     <meta property="og:image:alt" content="LongCat-DeepResearch scores across three public deep-research benchmarks.">
     <meta property="article:published_time" content="2026-09-23T00:00:00+08:00">
-    <meta property="article:modified_time" content="2026-10-04T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-10-23T00:00:00+08:00">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Introducing LongCat-DeepResearch">
-    <meta name="twitter:description" content="The technical report and open-source research system for LongCat-DeepResearch from the Meituan LongCat Team.">
+    <meta name="twitter:title" content="LongCat-DeepResearch: Multi-Agent Deep Research Harness">
+    <meta name="twitter:description" content="The open-source LongCat-DeepResearch harness supports multi-agent research planning, independent section research, and targeted report revision.">
     <meta name="twitter:image" content="https://meituan-longcat.github.io/LongCat-DeepResearch/assets/recorded-overview.png">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "TechArticle",
-        "headline": "Introducing LongCat-DeepResearch",
-        "description": "LongCat-DeepResearch coordinates exploratory planning, independent section research, direct assembly, and global-to-local editing through an executable ResearchSpec.",
+        "headline": "LongCat-DeepResearch: Multi-Agent Deep Research Harness",
+        "description": "The open-source LongCat-DeepResearch harness supports multi-agent research planning, independent section research, and targeted report revision.",
         "datePublished": "2026-09-23",
-        "dateModified": "2026-10-04",
+        "dateModified": "2026-10-23",
         "url": "https://meituan-longcat.github.io/LongCat-DeepResearch/",
         "mainEntityOfPage": {
           "@type": "WebPage",
@@ -56,7 +56,7 @@
           "width": 3000,
           "height": 1305
         },
-        "keywords": ["deep research", "research agents", "LongCat", "ResearchSpec", "technical report"]
+        "keywords": ["deep research", "multi-agent deep research", "research agents", "LongCat", "ResearchSpec", "technical report"]
       }
     </script>
     <link rel="icon" href="./longcat-mark.svg">
@@ -100,6 +100,7 @@
 
       <header class="hero">
         <h1>Introducing LongCat-DeepResearch</h1>
+        <p class="hero-meta">An open-source multi-agent deep research harness for research planning, independent section research, and targeted report revision.</p>
         <div class="hero-meta"><span>September 2026</span><span>·</span><span>Meituan LongCat Team</span></div>
         <div class="hero-links">
           <a class="link-btn" href="https://github.com/meituan-longcat/LongCat-DeepResearch" target="_blank" rel="noreferrer"><span class="link-icon">⌘</span>GitHub</a>
@@ -109,7 +110,7 @@
       </header>
 
       <section class="intro-section" id="overview"><div class="intro reveal">
-        <p><strong>LongCat-DeepResearch</strong> combines a model built on LongCat-2.0 with improvements in deep-research capabilities and the LongCat-DeepResearch harness. These improvements are intended to be incorporated into the next general-purpose LongCat model release.</p>
+        <p><strong>LongCat-DeepResearch</strong> combines a model built on LongCat-2.0 with improvements in deep-research capabilities and the LongCat-DeepResearch harness. This site describes the full research system; the <a href="https://github.com/meituan-longcat/LongCat-DeepResearch" target="_blank" rel="noreferrer">open-source repository</a> releases only the multi-agent harness, while users supply their own model, search, and page-fetch services. These improvements are intended to be incorporated into the next general-purpose LongCat model release.</p>
         <p>The system organizes open-ended research around an executable <strong>ResearchSpec</strong>. Multiple planners explore sources and refine a shared agenda; independent Researchers develop citation-bearing sections; direct assembly and coordinated editing turn those sections into a complete report without asking one final writer to regenerate everything.</p>
         <p>LongCat-DeepResearch achieves <strong>55.25</strong> on DeepResearchBench, <strong>51.35</strong> on DeepResearchBench II, and <strong>79.83</strong> on ResearchRubrics. Among the four systems compared in the report, it has the highest overall score on all three public benchmarks.</p>
       </div></section>
