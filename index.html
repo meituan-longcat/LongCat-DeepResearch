@@ -119,7 +119,6 @@
         <figure class="report-figure anim-fig" id="bench-anim" role="group" aria-label="Figure 1: scores of four deep research systems on three public benchmarks">
   <div class="bx-head">
     <ul class="bx-legend" aria-hidden="true"><li><span class="bx-sw bx-sw0"></span>LongCat-DeepResearch</li><li><span class="bx-sw bx-sw1"></span>Gemini-DeepResearch</li><li><span class="bx-sw bx-sw2"></span>ChatGPT-DeepResearch</li><li><span class="bx-sw bx-sw3"></span>Claude-DeepResearch</li></ul>
-    <button type="button" class="bx-replay" aria-label="Replay benchmark animation">Replay</button>
   </div>
   <div class="bx-panels">
 <div class="bx-panel"><svg class="bx-svg" viewBox="0 0 320 240"><defs><pattern id="bx-p-lc0" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="#087a2f"/><line x1="0" y1="0" x2="0" y2="7" stroke="#29e154" stroke-width="1.6" stroke-opacity=".55"/></pattern>
@@ -145,25 +144,23 @@
 #bench-anim .bx-sw1{background:#d6dcda}
 #bench-anim .bx-sw2{background:repeating-linear-gradient(45deg,#c3cbc9 0 3px,#9aa5a2 3px 4px)}
 #bench-anim .bx-sw3{background:repeating-linear-gradient(-45deg,#b4bebb 0 3px,#8b9794 3px 4px)}
-#bench-anim .bx-replay{font:inherit;font-size:13px;color:#4b5563;background:#fff;border:1px solid #e5e7eb;border-radius:999px;padding:3px 12px;cursor:pointer}
-#bench-anim .bx-replay:hover,#bench-anim .bx-replay:focus-visible{color:#087a2f;border-color:#a7f3bd;background:#effdf3}
 #bench-anim .bx-panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 #bench-anim .bx-panel{background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:12px 10px 10px;min-width:0;text-align:center}
 #bench-anim .bx-svg{display:block;width:100%;height:auto;overflow:visible;font-family:inherit}
 #bench-anim .bx-title{margin:2px 0 0;font-size:16px;font-weight:700;color:#111827;line-height:1.3}
-#bench-anim .bx-tip{margin:2px 0 0;min-height:2.7em;font-size:13px;line-height:1.35;color:#4b5563}
+#bench-anim .bx-tip{margin:2px 0 0;min-height:1.4em;font-size:13px;line-height:1.35;color:#4b5563}
 @media (max-width:899px){#bench-anim .bx-panels{grid-template-columns:1fr;max-width:460px;margin:0 auto}}
 /* chart marks */
 #bench-anim .bx-grid{stroke:#e5e7eb;stroke-width:1}
 #bench-anim .bx-axis{stroke:#9ca3af;stroke-width:1.2}
-#bench-anim .bx-tick{font-size:11.5px;fill:#4b5563}
-#bench-anim .bx-ylab{font-size:11.5px;fill:#4b5563}
-#bench-anim .bx-val{font-size:13px;fill:#111827;font-variant-numeric:tabular-nums}
+#bench-anim .bx-tick{font-size:12.5px;fill:#4b5563}
+#bench-anim .bx-ylab{font-size:12.5px;fill:#4b5563}
+#bench-anim .bx-val{font-size:14.5px;fill:#111827;font-variant-numeric:tabular-nums}
 #bench-anim .bx-bar0 .bx-val{font-weight:700;fill:#087a2f}
-#bench-anim .bx-name{font-size:11.5px;fill:#4b5563}
+#bench-anim .bx-name{font-size:13px;fill:#4b5563}
 #bench-anim .bx-bar0 .bx-name{fill:#087a2f;font-weight:600}
 #bench-anim .bx-badge rect{fill:#effdf3;stroke:#a7f3bd}
-#bench-anim .bx-badge text{font-size:11.5px;font-weight:700;fill:#087a2f}
+#bench-anim .bx-badge text{font-size:12.5px;font-weight:700;fill:#087a2f}
 /* interaction */
 #bench-anim .bx-bar{cursor:pointer;outline:none}
 #bench-anim .bx-bar rect{transition:filter .2s}
@@ -172,8 +169,7 @@
 #bench-anim .bx-badge{transition:opacity .4s}
 #bench-anim.is-armed .bx-badge{opacity:0}
 #bench-anim.is-armed .bx-badge.is-in{opacity:1}
-@media (prefers-reduced-motion:reduce){#bench-anim .bx-replay{display:none}#bench-anim .bx-badge,#bench-anim .bx-bar rect{transition:none}}
-</style>
+@media (prefers-reduced-motion:reduce){</style>
 <script>
 (function(){
   var fig=document.getElementById('bench-anim');
@@ -210,7 +206,6 @@
     new IntersectionObserver(function(es,io){
       if(es[0].isIntersecting&&!played){played=true;io.disconnect();play()}
     },{threshold:0.35}).observe(fig);
-    fig.querySelector('.bx-replay').addEventListener('click',play);
   }
   function show(g,on){
     var tip=g.closest('.bx-panel').querySelector('.bx-tip');
@@ -246,8 +241,7 @@
         <figure class="report-figure anim-fig anim-fig--wide" id="harness-anim" role="group" aria-label="Figure 2: the three-stage LongCat-DeepResearch harness">
   <p class="sr-only">Three-stage LongCat-DeepResearch harness. Stage 1, Explore and plan: an open-ended research query goes to multi-view planners (Planner 1, Planner 2, Planner N; brief search plus source reading). A Judge merges their views, a Critic finds gaps, and a Reviser revises, under a budget of views and rounds. The result is a ResearchSpec: scope, questions, cases, entities, and source leads. Stage 2, Research sections: a shared research context holds the original query and the full spec. Independent researchers, each with the full spec plus one assignment, research and write Section 1, Section 2, through Section N, producing cited sections: one chapter each, originals retained. Stage 3, Assemble and edit: direct assembly with no rewrite yields a complete draft with text and refs. A global editor reads the full draft and issues directives on ownership, conflicts, and changes. Local editors receive the full draft, full spec, and a directive, and revise Section 1, Section 2, through Section N. The revised sections form the final report.</p>
   <div class="hx-bar">
-    <div class="hx-steps" role="group" aria-label="Play a stage"><button type="button" class="hx-step" data-k="0"><span>1</span>Explore &amp; plan</button><button type="button" class="hx-step" data-k="1"><span>2</span>Research sections</button><button type="button" class="hx-step" data-k="2"><span>3</span>Assemble &amp; edit</button></div>
-    <button type="button" class="hx-replay" aria-label="Replay harness animation">Replay</button>
+    <div class="hx-steps" aria-hidden="true"><div class="hx-step" data-k="0"><span>1</span>Explore &amp; plan</div><div class="hx-step" data-k="1"><span>2</span>Research sections</div><div class="hx-step" data-k="2"><span>3</span>Assemble &amp; edit</div></div>
   </div>
   <div class="hx-grid">
     <section class="hx-col hx-e" data-s="0" aria-label="Stage 1: Explore &amp; plan"><h4 class="hx-ch"><span class="hx-num">1</span>Explore &amp; plan</h4><div class="hx-n hx-plain" data-s="0"><svg class="hx-ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h9l5 5v15H5z"/><path d="M14 2v5h5"/><path d="M8 12h8M8 15h8M8 18h5"/></svg><span class="hx-tx"><b>Query</b><span class="hx-sub">Open-ended research task</span></span></div><div class="hx-bus hx-e" data-s="1" aria-hidden="true"><i class="hx-up" style="left:50%"><svg class="hx-vl" viewBox="0 0 2 10" preserveAspectRatio="none" aria-hidden="true"><path class="hx-fl" d="M1 0V10"/></svg></i><i class="hx-dn" style="left:50%"><svg class="hx-vl" viewBox="0 0 2 10" preserveAspectRatio="none" aria-hidden="true"><path class="hx-fl" d="M1 0V10"/></svg><svg class="hx-hd" viewBox="0 0 10 7" aria-hidden="true"><path d="M0 0h10L5 7z"/></svg></i></div><div class="hx-n hx-grp" data-s="1" tabindex="0" data-tip="Planning Writers briefly search and read before proposing candidate specifications."><b>Multi-view planners</b><span class="hx-sub">Brief search + source reading</span><div class="hx-tri"><div class="hx-pl"><svg class="hx-ic hx-ics" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="M14.5 14.5 20 20"/></svg><svg class="hx-ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h8l3 3v12H3z" opacity=".55"/><path d="M6 3h9l4 4v15H6z" fill="#fff"/><path d="M15 3v4h4M9 12h7M9 15h7M9 18h5"/></svg><b>Planner 1</b></div><div class="hx-pl"><svg class="hx-ic hx-ics" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="M14.5 14.5 20 20"/></svg><svg class="hx-ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h8l3 3v12H3z" opacity=".55"/><path d="M6 3h9l4 4v15H6z" fill="#fff"/><path d="M15 3v4h4M9 12h7M9 15h7M9 18h5"/></svg><b>Planner 2</b></div><div class="hx-pl"><svg class="hx-ic hx-ics" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="M14.5 14.5 20 20"/></svg><svg class="hx-ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h8l3 3v12H3z" opacity=".55"/><path d="M6 3h9l4 4v15H6z" fill="#fff"/><path d="M15 3v4h4M9 12h7M9 15h7M9 18h5"/></svg><b>Planner N</b></div></div></div><div class="hx-bus hx-e" data-s="2" aria-hidden="true"><i class="hx-up" style="left:50%"><svg class="hx-vl" viewBox="0 0 2 10" preserveAspectRatio="none" aria-hidden="true"><path class="hx-fl" d="M1 0V10"/></svg></i><i class="hx-hb" style="left:calc(16.667% + -6px);right:50%"><svg viewBox="0 0 100 2" preserveAspectRatio="none" aria-hidden="true"><path class="hx-fl" d="M100 1H0"/></svg></i><i class="hx-dn" style="left:calc(16.667% + -6px)"><svg class="hx-vl" viewBox="0 0 2 10" preserveAspectRatio="none" aria-hidden="true"><path class="hx-fl" d="M1 0V10"/></svg><svg class="hx-hd" viewBox="0 0 10 7" aria-hidden="true"><path d="M0 0h10L5 7z"/></svg></i></div><div class="hx-row3"><div class="hx-n hx-c" data-s="2" tabindex="0" data-tip="A Planning Judge integrates the writers' perspectives."><svg class="hx-ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l6 6-6 6"/><path d="M10 12h10M17 9l3 3-3 3"/></svg><span class="hx-tx"><b>Judge</b><span class="hx-sub">Merge</span></span></div><svg class="hx-ha hx-e" data-s="3" viewBox="0 0 18 10" aria-hidden="true"><path class="hx-fl" d="M0 5H12"/><path class="hx-hh" d="M11 1l7 4-7 4z"/></svg><div class="hx-n hx-c" data-s="3" tabindex="0" data-tip="A Critic looks for missing questions and cases."><svg class="hx-ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><span class="hx-tx"><b>Critic</b><span class="hx-sub">Find gaps</span></span></div><svg class="hx-ha hx-e" data-s="4" viewBox="0 0 18 10" aria-hidden="true"><path class="hx-fl" d="M0 5H12"/><path class="hx-hh" d="M11 1l7 4-7 4z"/></svg><div class="hx-n hx-c" data-s="4" tabindex="0" data-tip="A Reviser updates the plan."><svg class="hx-ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span class="hx-tx"><b>Reviser</b><span class="hx-sub">Revise</span></span></div></div><div class="hx-bus hx-e hx-grow" data-s="5" aria-hidden="true"><span class="hx-budget hx-n" data-s="5">Budget: views / rounds</span><i class="hx-up" style="left:calc(83.333% + 6px)"><svg class="hx-vl" viewBox="0 0 2 10" preserveAspectRatio="none" aria-hidden="true"><path class="hx-fl" d="M1 0V10"/></svg></i><i class="hx-dn" style="left:calc(83.333% + 6px)"><svg class="hx-vl" viewBox="0 0 2 10" preserveAspectRatio="none" aria-hidden="true"><path class="hx-fl" d="M1 0V10"/></svg><svg class="hx-hd" viewBox="0 0 10 7" aria-hidden="true"><path d="M0 0h10L5 7z"/></svg></i></div><div class="hx-n hx-g hx-spec" data-s="5" tabindex="0" data-tip="Records scope, research questions, required entities or cases, provisional source leads, and section responsibilities."><svg class="hx-ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2h11l5 5v15H4z"/><path d="M15 2v5h5"/><path d="M7 10h3v3H7zM7 16h3v3H7z"/><path d="M12 11.5h5M12 17.5h5"/></svg><span class="hx-tx"><b>ResearchSpec</b><span class="hx-sub">Scope · questions · cases<br>entities · source leads</span></span></div></section>
@@ -266,13 +260,11 @@
 #harness-anim b{font-weight:600}
 #harness-anim .hx-bar{display:flex;align-items:flex-end;gap:16px;margin:0 0 14px}
 #harness-anim .hx-steps{display:flex;flex:1;gap:10px}
-#harness-anim .hx-step{--p:1;position:relative;flex:1;display:flex;align-items:center;gap:7px;padding:0 0 9px;border:0;background:none;font:inherit;font-size:13px;line-height:1.3;color:#4b5563;text-align:left;cursor:pointer}
+#harness-anim .hx-step{--p:1;position:relative;flex:1;display:flex;align-items:center;gap:7px;padding:0 0 9px;border:0;background:none;font:inherit;font-size:13px;line-height:1.3;color:#4b5563;text-align:left}
 #harness-anim .hx-step span{flex:none;display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#effdf3;color:#087a2f;font-size:11px;font-weight:600}
 #harness-anim .hx-step::before,#harness-anim .hx-step::after{content:"";position:absolute;left:0;bottom:0;height:3px;border-radius:2px;background:#e5e7eb;width:100%}
 #harness-anim .hx-step::after{background:#29e154;width:calc(var(--p)*100%);transition:width .5s}
-#harness-anim .hx-step:hover,#harness-anim .hx-step[aria-current]{color:#111827}
-#harness-anim .hx-replay{flex:none;margin-bottom:4px;padding:4px 13px;border:1px solid #a7f3bd;border-radius:999px;background:#fff;color:#087a2f;font:inherit;font-size:13px;cursor:pointer}
-#harness-anim .hx-replay:hover{background:#effdf3}
+#harness-anim .hx-step[aria-current]{color:#111827}
 #harness-anim button:focus-visible,#harness-anim [tabindex]:focus-visible{outline:2px solid #087a2f;outline-offset:2px}
 
 /* columns */
@@ -380,8 +372,7 @@
 @media (prefers-reduced-motion:reduce){
   #harness-anim .hx-fl,#harness-anim .hx-busy,#harness-anim .hx-busy .hx-ics{animation:none}
   #harness-anim *{transition:none!important}
-  #harness-anim .hx-replay{display:none}
-  #harness-anim .hx-step{cursor:default}
+    #harness-anim .hx-step{cursor:default}
 }
 </style>
 <script>
@@ -441,8 +432,6 @@
     }, { threshold: .35 });
     io.observe(f);
   }
-  f.querySelector('.hx-replay').addEventListener('click', () => play(0));
-  steps.forEach((b, j) => b.addEventListener('click', () => play(j)));
 
   let cur = null;
   const hide = () => {
@@ -515,11 +504,10 @@
 
   <div class="sx-bar">
     <div class="sx-prog">
-      <button type="button" class="sx-seg" data-stage="0" aria-label="Play stage 1: Grounded synthesis"><span class="sx-seg-l">1 · Synthesis</span><span class="sx-track"><span class="sx-fill"></span></span></button>
-      <button type="button" class="sx-seg" data-stage="1" aria-label="Play stage 2: Task validation"><span class="sx-seg-l">2 · Validation</span><span class="sx-track"><span class="sx-fill"></span></span></button>
-      <button type="button" class="sx-seg" data-stage="2" aria-label="Play stage 3: Harness traces"><span class="sx-seg-l">3 · Traces</span><span class="sx-track"><span class="sx-fill"></span></span></button>
+      <div class="sx-seg" data-stage="0"><span class="sx-seg-l">1 · Synthesis</span><span class="sx-track"><span class="sx-fill"></span></span></div>
+      <div class="sx-seg" data-stage="1"><span class="sx-seg-l">2 · Validation</span><span class="sx-track"><span class="sx-fill"></span></span></div>
+      <div class="sx-seg" data-stage="2"><span class="sx-seg-l">3 · Traces</span><span class="sx-track"><span class="sx-fill"></span></span></div>
     </div>
-    <button type="button" class="sx-replay" aria-label="Replay figure animation">&#8635; Replay</button>
   </div>
 
   <div class="sx-grid" aria-hidden="true">
@@ -650,13 +638,11 @@
 /* controls */
 #synthesis-anim .sx-bar{display:flex;align-items:flex-end;gap:14px;margin:0 0 12px}
 #synthesis-anim .sx-prog{flex:1;display:flex;gap:6px}
-#synthesis-anim .sx-seg{flex:1;background:none;border:0;padding:2px 0;cursor:pointer;font:inherit;text-align:left;color:#4b5563}
-#synthesis-anim .sx-seg-l{display:block;font-size:12px;margin-bottom:4px}
+#synthesis-anim .sx-seg{flex:1;background:none;border:0;padding:2px 0;font:inherit;text-align:left;color:#4b5563}
+#synthesis-anim .sx-seg-l{display:block;font-size:13px;margin-bottom:4px}
 #synthesis-anim .sx-track{display:block;height:3px;border-radius:2px;background:#e5e7eb;overflow:hidden}
 #synthesis-anim .sx-fill{display:block;height:100%;width:100%;background:#087a2f}
-#synthesis-anim .sx-replay{font:inherit;font-size:12.5px;color:#087a2f;background:#fff;border:1px solid #a7f3bd;border-radius:999px;padding:4px 12px;cursor:pointer}
-#synthesis-anim .sx-seg:focus-visible,#synthesis-anim .sx-replay:focus-visible,#synthesis-anim .sx-tip:focus-visible{outline:2px solid #29e154;outline-offset:2px}
-
+#synthesis-anim .sx-seg:focus-visible,
 /* layout */
 #synthesis-anim .sx-grid{display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1.08fr) 30px minmax(0,1fr);align-items:stretch}
 #synthesis-anim .sx-col{border:1.5px solid #e5e7eb;border-radius:14px;padding:14px 14px 16px;display:flex;flex-direction:column;gap:10px;background:#fff;min-width:0}
@@ -844,10 +830,6 @@
   }
 
   fig.classList.add('is-armed');
-  fig.querySelector('.sx-replay').addEventListener('click', function () { play(0); });
-  fig.querySelectorAll('.sx-seg').forEach(function (b) {
-    b.addEventListener('click', function () { play(+b.dataset.stage); });
-  });
   var io = new IntersectionObserver(function (entries) {
     if (entries[0].isIntersecting) { io.disconnect(); play(0); }
   }, { threshold: 0.35 });
