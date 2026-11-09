@@ -112,3 +112,23 @@ SHA-256. Live asset/content verification follows Pages deployment.
 `6ceef71` — Sync blog figures and full citation with arXiv report.
 
 Planner verification (2026-10-23): checked release scope against README and source; desktop 1440px/mobile 390px rendering and image loading pass. Repository metadata now includes description, six relevant topics and the project homepage.
+
+## 2026-11-09 — Animated figures (local review draft)
+
+### Question
+
+Add motion to the blog without changing claims or numbers.
+
+### Solution
+
+Inline SVG/HTML + CSS + vanilla JS only (no build, no external resources). Figure 1 bars grow with value counters and lead badges; Figure 2 (harness) and Figure 3 (task/trajectory construction) light up stage by stage with flowing connectors, clickable stage bar, replay button, and hover/focus notes quoted from the article text. Margin counters, case-study cards and section reveals animate on scroll. `prefers-reduced-motion` and no-JS show the final static state. Static SVG/PNG assets are kept in `assets/`.
+
+### Files Changed
+
+- `index.html`
+- `style.css`
+- `docs/dev.md`
+
+### Verification
+
+Real-browser captures at 1400px and 500px: animations progress and end fully lit; no horizontal overflow; no console errors; all displayed benchmark numbers equal the results table.

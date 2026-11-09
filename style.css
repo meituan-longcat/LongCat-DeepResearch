@@ -1080,3 +1080,20 @@ footer {
     overflow-wrap: anywhere;
   }
 }
+
+/* Motion layer: armed by script, final state is the default */
+.motion-armed .reveal { opacity: 0; transform: translateY(14px); }
+.motion-armed .reveal.is-visible { opacity: 1; transform: none; }
+.insight-card { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.insight-card:hover { transform: translateY(-3px); border-color: var(--accent-line); box-shadow: 0 8px 22px rgba(8, 122, 47, .08); }
+.motion-armed .case-flow > div { opacity: .38; transition: opacity .5s ease, background .5s ease; }
+.motion-armed .case-flow.is-playing > div.is-lit,
+.motion-armed .case-flow.is-done > div { opacity: 1; }
+.motion-armed .case-flow > div.is-lit { background: var(--accent-soft); }
+.motion-armed .case-flow.is-done > div { background: #f8fbf9; }
+@media (prefers-reduced-motion: reduce) {
+  .motion-armed .reveal { opacity: 1; transform: none; }
+  .motion-armed .case-flow > div { opacity: 1; }
+  .insight-card:hover { transform: none; }
+}
+.report-figure.anim-fig--wide { position: relative; left: 50%; width: min(1000px, calc(100vw - 40px)); transform: translateX(-50%); }
